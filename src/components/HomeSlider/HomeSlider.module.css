@@ -1,0 +1,77 @@
+/*
+
+:root {
+  --color-main: #2c2c2c;
+  --color-secondary: #e8e8e8;
+  --color-logo-1: #2c2c38;
+  --color-logo-2: #00DBA3;
+  --color-option-1: #20A4F3;
+  --color-option-2: #DC6ACF;
+  --color-option-3: #90D7FF;
+  --color-white: #fafafa;
+  --color-black: #212121;
+}
+
+*/
+
+.slider_container {
+  width: 100%;
+  height: calc(100dvh - 74px);
+  /* min-height: 400px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME*/
+  /* max-height: 600px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME*/
+  position: relative;
+  background-image: url('../../assets/images/wallpapers/image1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.first_image,
+.second_image {
+  animation-name: change_background_1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+.second_image {
+  animation-name: change_background_2;
+}
+
+.text_description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0.69) 71.88%, rgba(0, 0, 0, 0.69) 100%);
+  color: var(--color-secondary);
+  padding: 0 2.05rem;
+  text-align: center;
+}
+
+.link_to_book {
+  margin: 2rem 0 0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: var(--color-logo-2);
+  color: var(--color-black);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes change_background_1 {
+  from {
+    background-image: url('../../assets/images/wallpapers/image2.jpg');
+  }
+  to {
+    background-image: url('../../assets/images/wallpapers/image1.jpg');
+  }
+}
+
+
+@keyframes change_background_2 {  
+  to {
+    background-image: url('../../assets/images/wallpapers/image2.jpg');
+  }
+}
