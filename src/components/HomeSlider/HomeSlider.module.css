@@ -20,7 +20,7 @@
   /* min-height: 400px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME*/
   /* max-height: 600px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME*/
   position: relative;
-  background-image: url('../../assets/images/wallpapers/image1.jpg');
+  background-image: url('../../assets/images/wallpapers/image1.webp');
   background-position: center;
   background-size: cover;
 }
@@ -50,6 +50,10 @@
   text-align: center;
 }
 
+.text_description  > h1 {
+  font-size: 1.5em;
+}
+
 .link_to_book {
   margin: 2rem 0 0;
   border-radius: 20px;
@@ -62,16 +66,16 @@
 
 @keyframes change_background_1 {
   from {
-    background-image: url('../../assets/images/wallpapers/image2.jpg');
+    background-image: url('../../assets/images/wallpapers/image2.webp');
   }
   to {
-    background-image: url('../../assets/images/wallpapers/image1.jpg');
+    background-image: url('../../assets/images/wallpapers/image1.webp');
   }
 }
 
 
 @keyframes change_background_2 {  
   to {
-    background-image: url('../../assets/images/wallpapers/image2.jpg');
+    background-image: url('../../assets/images/wallpapers/image2.webp');
   }
 }

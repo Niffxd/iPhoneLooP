@@ -16,14 +16,14 @@ export default function HomeSlider () {
         document.getElementById(style.slider_container).classList.add(style.first_image);
         setCurrentBackground(1);
       }
-    }, 5000);
+    }, 7000);
   }, [currentBackground]);
 
   return (
    <div id={style.slider_container} className={style.slider_container}>
     {/* <div className={style.second_image}></div> */}
     <div className={style.text_description}>
-      <h2>I'm an iPhone Repair Expert, specialist in Micro-Component repairs</h2>
+      <h1>Hi, I'm Franco. I'm an iPhone repair expert, specialized in motherboard repairs</h1>
       <Link className={style.link_to_book} to='https://phonelooperth.com' target='_blank'>
         Book now
       </Link>

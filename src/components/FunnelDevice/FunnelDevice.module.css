@@ -1,0 +1,19 @@
+.funnel_device_container {
+  padding: 24px;
+}
+
+.important_text {
+  margin-bottom: 24px;
+}
+
+.important_text > h1 {
+  margin-bottom: 18px;
+}
+
+.important_text > p {
+  margin-bottom: 6px;
+}
+
+.important_text span {
+  font-weight: bolder;
+}
