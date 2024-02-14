@@ -9,10 +9,9 @@
   display: flex;
   gap: 1.5rem;
   animation-name: slide;
-  animation-duration: 30s;
+  animation-duration: 20s;
   animation-timing-function: linear;
   animation-direction: alternate;
-  animation-fill-mode: both;
   animation-iteration-count: infinite;
 }
 
@@ -22,6 +21,6 @@
 
 @keyframes slide {
   to {
-    transform: translateX(-85%);
+    transform: translateX(calc(-310px * 9));
   }
 }
