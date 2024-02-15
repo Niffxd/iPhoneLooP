@@ -11,9 +11,27 @@
 }
 
 .important_text > p {
+  display: flex;
+  align-items: center;
   margin-bottom: 6px;
+  gap: 8px;
 }
 
 .important_text span {
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-logo-2);
+  background-color: var(--color-logo-1);
   font-weight: bolder;
+  border-radius: 50%;
+}
+
+.important_text > p > span:nth-child(2){
+  width: 12px;
+  height: 24px;
 }

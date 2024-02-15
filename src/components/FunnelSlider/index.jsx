@@ -12,6 +12,13 @@ export default function FunnelDevice () {
             );
           })
         }
+        {
+          list.map(({ id, imgPath }) => {
+            return (
+              <img key={id} src={imgPath} alt='funnel-slider-image' />
+            );
+          })
+        }
       </div>
     </div>
   );
