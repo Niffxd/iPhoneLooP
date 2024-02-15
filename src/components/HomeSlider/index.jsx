@@ -24,7 +24,7 @@ export default function HomeSlider () {
     {/* <div className={style.second_image}></div> */}
     <div className={style.text_description}>
       <h1>Hi, I'm Franco. I'm an iPhone repair expert, specialized in motherboard repairs</h1>
-      <Link className={style.link_to_book} to='https://phonelooperth.com' target='_blank'>
+      <Link className={style.link_to_book} to='/system.html' target='_blank'>
         Book now
       </Link>
     </div>
