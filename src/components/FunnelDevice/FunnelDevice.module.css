@@ -8,6 +8,8 @@
 
 .important_text > h1 {
   margin-bottom: 18px;
+  color: var(--color-logo-1);
+  text-align: center;
 }
 
 .important_text > p {
