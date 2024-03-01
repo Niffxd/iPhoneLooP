@@ -8,6 +8,7 @@ import image7 from '../../assets/images/slider/slider-7.jpg';
 import image8 from '../../assets/images/slider/slider-8.jpg';
 import image9 from '../../assets/images/slider/slider-9.jpg';
 import image10 from '../../assets/images/slider/slider-10.jpg';
+import image11 from '../../assets/images/slider/slider-11.jpg';
 
 export const list = [
   {
@@ -49,5 +50,9 @@ export const list = [
   {
     id: 10,
     imgPath: image10
+  },
+  {
+    id: 11,
+    imgPath: image11
   }
 ];
