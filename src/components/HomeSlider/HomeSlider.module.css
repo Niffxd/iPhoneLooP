@@ -66,7 +66,7 @@
 
 @keyframes change_background_1 {
   from {
-    background-image: url('../../assets/images/wallpapers/image2.webp');
+    background-image: url('../../assets/images/wallpapers/image3.webp');
   }
   to {
     background-image: url('../../assets/images/wallpapers/image1.webp');
@@ -76,6 +76,6 @@
 
 @keyframes change_background_2 {  
   to {
-    background-image: url('../../assets/images/wallpapers/image2.webp');
+    background-image: url('../../assets/images/wallpapers/image3.webp');
   }
 }
