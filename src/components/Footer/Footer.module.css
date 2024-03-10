@@ -1,0 +1,55 @@
+/*
+
+:root {
+  --color-main: #2c2c2c;
+  --color-secondary: #e8e8e8;
+  --color-logo-1: #2c2c38;
+  --color-logo-2: #00DBA3;
+  --color-option-1: #20A4F3;
+  --color-option-2: #DC6ACF;
+  --color-option-3: #90D7FF;
+  --color-white: #fafafa;
+  --color-black: #212121;
+}
+
+*/
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-logo-1);
+}
+
+.contact_container {
+  padding: 1rem 0;
+}
+
+.card {
+  display: flex;
+  gap: 12px;
+  margin: 1rem 0;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  > img {
+    width: 32px;
+    height: 32px;
+  }
+  background-color: var(--color-logo-2);
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  color: var(--color-secondary);
+}

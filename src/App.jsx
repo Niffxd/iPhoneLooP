@@ -3,6 +3,7 @@ import logo from './assets/images/logo.png'; // eslint-disable-line
 import links from './assets/json/categories.json';
 import Navbar from './components/Navbar'; // eslint-disable-line
 import Home from './pages/Home'; //eslint-disable-line
+import Footer from './components/Footer'; //eslint-disable-line
 import './App.css';
 
 function App () {
@@ -12,6 +13,7 @@ function App () {
       <Routes>
         <Route exac path='/' element={<Home />}/>
       </Routes>
+      <Footer logo={logo} links={links}/>
     </BrowserRouter>
   );
 }
