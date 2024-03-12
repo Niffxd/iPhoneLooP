@@ -23,7 +23,34 @@
 }
 
 .contact_container {
-  padding: 1rem 0;
+  display: grid;
+  grid-template-areas:
+    "whatsapp facebook"
+    "instagram location"
+    "mail mail";
+  gap: 0 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+#whatsapp {
+  grid-area: whatsapp;
+}
+
+#facebook {
+  grid-area: facebook;
+}
+
+#instagram {
+  grid-area: instagram;
+}
+
+#location {
+  grid-area: location;
+}
+
+#mail {
+  grid-area: mail;
 }
 
 .card {
@@ -33,6 +60,8 @@
 }
 
 .icon {
+  width: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;

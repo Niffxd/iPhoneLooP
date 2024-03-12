@@ -9,7 +9,7 @@ export default function Footer () {
         {
           contactItems.map(({ name, link, text }) => {
             return (
-              <Link to={link} target='_blank'>
+              <Link to={link} target='_blank' id={style[name.toLowerCase()]}>
                 <article key={name} className={style.card}>
                   <div className={style.icon}>
                     <img src={foundSVG(name)} alt={name} />
