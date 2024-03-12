@@ -50,7 +50,8 @@ export default function Navbar ({ logo, banner, links }) {
             Book
           </Link>
         </div>
-      </div> // TODO: Descomentar cuando estén listas las páginas para navegación */}
+      </div> */}
+      {/* // TODO: Descomentar cuando estén listas las páginas para navegación */}
     </nav>
   );
 }
