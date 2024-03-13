@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // eslint-disable-line
+import BtnBook from '../BtnBook'; // eslint-disable-line
 // import { list } from './images.js';
 import style from './HomeSlider.module.css';
 
@@ -17,7 +17,7 @@ export default function HomeSlider () {
         document.getElementById(style.second_image).classList?.add(style.fade_out);
         setImage(0);
       }
-    }, 7000);
+    }, 9000);
   }, [image]);
 
   return (
@@ -25,9 +25,7 @@ export default function HomeSlider () {
     <div className={style.second_image} id={style.second_image} />
     <div className={style.text_description}>
       <h1>Hi, I'm Franco. I'm an iPhone repair expert, specialized in motherboard repairs</h1>
-      <Link className={style.link_to_book} to='/system.html' target='_blank'>
-        Book now
-      </Link>
+      <BtnBook />
     </div>
    </div>
   );
