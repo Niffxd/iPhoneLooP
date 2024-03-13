@@ -20,17 +20,19 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-logo-1);
+  padding-bottom: 2rem;
 }
 
 .contact_container {
   display: grid;
   grid-template-areas:
-    "whatsapp facebook"
-    "instagram location"
-    "mail mail";
+    "whatsapp whatsapp whatsapp"
+    "facebook instagram mail"
+    "location location location";
   gap: 0 1rem;
   align-items: center;
   padding: 1rem;
+  padding-bottom: 0;
 }
 
 #whatsapp {
