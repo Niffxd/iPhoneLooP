@@ -4,24 +4,25 @@ import { Link } from 'react-router-dom'; // eslint-disable-line
 import style from './HomeSlider.module.css';
 
 export default function HomeSlider () {
-  const [currentBackground, setCurrentBackground] = useState(1);
+  const [image, setImage] = useState(0);
+
   useEffect(() => {
     setTimeout(() => {
-      if (currentBackground === 1) {
-        document.getElementById(style.slider_container).classList?.remove(style.first_image);
-        document.getElementById(style.slider_container).classList.add(style.second_image);
-        setCurrentBackground(2);
+      if (!image) {
+        document.getElementById(style.second_image).classList?.add(style.fade_in);
+        document.getElementById(style.second_image).classList?.remove(style.fade_out);
+        setImage(1);
       } else {
-        document.getElementById(style.slider_container).classList?.remove(style.second_image);
-        document.getElementById(style.slider_container).classList.add(style.first_image);
-        setCurrentBackground(1);
+        document.getElementById(style.second_image).classList?.remove(style.fade_in);
+        document.getElementById(style.second_image).classList?.add(style.fade_out);
+        setImage(0);
       }
     }, 7000);
-  }, [currentBackground]);
+  }, [image]);
 
   return (
-   <div id={style.slider_container} className={style.slider_container}>
-    {/* <div className={style.second_image}></div> */}
+   <div className={style.slider_container} id={style.slider_container}>
+    <div className={style.second_image} id={style.second_image} />
     <div className={style.text_description}>
       <h1>Hi, I'm Franco. I'm an iPhone repair expert, specialized in motherboard repairs</h1>
       <Link className={style.link_to_book} to='/system.html' target='_blank'>

@@ -39,7 +39,7 @@ export const contactItems = [
   },
   {
     name: 'Mail',
-    link: 'mailto:nicosanchez675@gmail.com?subject=Ask%20for%20a%20service&body=Tell%20me%20about%20your%20problem%20and%20I%20will%20response%20ASAP!%20%F0%9F%98%83',
+    link: 'mailto:phonelooperth@gmail.com?subject=Ask%20for%20a%20service&body=Tell%20me%20about%20your%20problem%20and%20I%20will%20response%20ASAP!%20%F0%9F%98%83',
     text: 'phonelooperth@gmail.com'
   }
 ];
