@@ -15,29 +15,41 @@
 */
 
 .slider_container {
+  position: relative;
   width: 100%;
   height: calc(100vh - 74px);
-  /* min-height: 400px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME*/
-  /* max-height: 600px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME*/
+  /* min-height: 400px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME */
+  /* max-height: 600px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME */
   position: relative;
   background-image: url('../../assets/images/wallpapers/image1.webp');
   background-position: center;
   background-size: cover;
 }
 
-.first_image,
 .second_image {
-  animation-name: change_background_1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/images/wallpapers/image3.webp');
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  z-index: 1;
   animation-duration: 1s;
   animation-timing-function: linear;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 
-.second_image {
-  animation-name: change_background_2;
+.fade_in {
+  animation-name: fade_in;
+}
+
+.fade_out {
+  animation-name: fade_out;
 }
 
 .text_description {
+  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
@@ -48,6 +60,7 @@
   color: var(--color-secondary);
   padding: 0 2.05rem;
   text-align: center;
+  z-index: 2;
 }
 
 .text_description  > h1 {
@@ -64,18 +77,17 @@
   cursor: pointer;
 }
 
-@keyframes change_background_1 {
-  from {
-    background-image: url('../../assets/images/wallpapers/image3.webp');
-  }
+@keyframes fade_in {
   to {
-    background-image: url('../../assets/images/wallpapers/image1.webp');
+    opacity: 1;
   }
 }
 
-
-@keyframes change_background_2 {  
+@keyframes fade_out {
+  from {
+    opacity: 1;
+  }
   to {
-    background-image: url('../../assets/images/wallpapers/image3.webp');
+    opacity: 0;
   }
 }
