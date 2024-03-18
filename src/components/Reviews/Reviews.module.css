@@ -41,6 +41,9 @@
 }
 
 .user_profile_data {
+  > h4 {
+    margin-bottom: 5px;
+  }
   > p {
     color: gray;
   }
