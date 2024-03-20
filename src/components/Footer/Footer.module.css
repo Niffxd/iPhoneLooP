@@ -27,8 +27,8 @@
   display: grid;
   grid-template-areas:
     "whatsapp whatsapp whatsapp"
-    "facebook instagram mail"
-    "location location location";
+    "location location location"
+    "facebook instagram mail";
   gap: 0 1rem;
   align-items: center;
   padding: 1rem;

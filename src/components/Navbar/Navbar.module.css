@@ -87,7 +87,7 @@
   background-color: var(--color-white);
   animation: .5s opacity;
   list-style-type: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 .link > li,
