@@ -1,0 +1,11 @@
+.ready_container {
+  > h1 {
+    margin: 24px 0;
+    color: var(--color-secondary);
+    text-align: center;
+  }
+
+  > p {
+    color: var(--color-secondary);
+  }
+}
