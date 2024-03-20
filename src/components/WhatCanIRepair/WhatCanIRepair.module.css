@@ -1,6 +1,7 @@
 .what_can_i_repair_container {
   padding: 24px 32px;
-  padding-top: 0;
+  /* padding-top: 0; */
+  /* background-color: var(--color-main-opacity30); */
   > h2 {
     text-align: center;
     margin-bottom: 20px;

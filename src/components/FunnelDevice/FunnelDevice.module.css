@@ -1,5 +1,6 @@
 .funnel_device_container {
   padding: 24px;
+  background-color: var(--color-main-opacity30);
 }
 
 .important_text {

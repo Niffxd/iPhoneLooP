@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; //eslint-disable-line
 import { contactItems, foundSVG } from './contactItems';
-import BtnBook from '../BtnBook'; // eslint-disable-line
+// import BtnBook from '../BtnBook'; // eslint-disable-line
 import style from './Footer.module.css';
 
 export default function Footer () {
@@ -29,7 +29,7 @@ export default function Footer () {
           })
         }
       </div>
-      <BtnBook />
+      {/* <BtnBook /> */}
     </footer>
   );
 }
