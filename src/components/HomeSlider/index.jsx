@@ -25,7 +25,7 @@ export default function HomeSlider () {
     <div className={style.second_image} id={style.second_image} />
     <div className={style.text_description}>
       <h1>Hi, I'm Franco. I'm an iPhone repair expert, specialized in motherboard repairs</h1>
-      <BtnBook />
+      <BtnBook text='Book now' link='/system.html' />
     </div>
    </div>
   );

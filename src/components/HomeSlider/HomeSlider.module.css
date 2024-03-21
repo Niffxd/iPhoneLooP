@@ -18,8 +18,8 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 74px);
-  /* min-height: 400px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME */
-  /* max-height: 600px; */ /* TODO: DESCOMENTAR CUANDO SE TERMINE LA HOME */
+  min-height: 600px;
+  max-height: 750px;
   position: relative;
   background-image: url('../../assets/images/wallpapers/image1.webp');
   background-position: center;

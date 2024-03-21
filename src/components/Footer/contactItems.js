@@ -43,3 +43,7 @@ export const contactItems = [
     text: 'phonelooperth@gmail.com'
   }
 ];
+
+export const obtainLink = queryLink => contactItems.find(element => element.name.toLowerCase() === queryLink).link;
+export const obtainName = queryName => contactItems.find(element => element.name.toLowerCase() === queryName).name;
+export const obtainText = queryText => contactItems.find(element => element.name.toLowerCase() === queryText).text;
