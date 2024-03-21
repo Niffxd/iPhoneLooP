@@ -1,22 +1,25 @@
 .funnel_device_container {
   padding: 24px;
+  background-color: var(--color-main-opacity30);
 }
 
 .important_text {
   margin-bottom: 24px;
 }
 
-.important_text > h1 {
-  margin-bottom: 18px;
-  color: var(--color-logo-1);
-  text-align: center;
-}
+.important_text {
+  > h1 {
+    margin-bottom: 18px;
+    color: var(--color-logo-1);
+    text-align: center;
+  }
 
-.important_text > p {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  gap: 8px;
+  > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    gap: 8px;
+  }
 }
 
 .important_text span {

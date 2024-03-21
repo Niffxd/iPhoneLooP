@@ -19,7 +19,8 @@
   flex-direction: column;
   gap: 32px;
   padding: 24px;
-  padding-top: 0;
+  /* padding-top: 0; */
+  background-color: var(--color-main-opacity30);
   > h2 {
     text-align: center;
   }
