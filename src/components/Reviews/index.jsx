@@ -1,63 +1,55 @@
-import { useState, useEffect } from 'react'; //eslint-disable-line
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; //eslint-disable-line
-// import db from '../../assets/json/db_test.json';
+import Loader from '../../assets/loaders/loader.svg';
+import { obtainReviews } from './reviews';
 import style from './Reviews.module.css';
 
-const link = 'https://maps.googleapis.com/maps/api/place/details/json?fields=reviews&place_id=ChIJb2KloCCvMioRAHmRSPx1T9w&key=AIzaSyAK5IbU90Q5pZ6S6hAksxb8RCTfgqUZVoQ';
-
 export default function Reviews () {
-  // const { reviews } = db.result;
   const [data, setData] = useState(null);
 
-  const obtainReviews = async link => {
-    const response = await fetch(link);
-    const result = response.json();
-
-    // return result;
-    console.log(result);
-  };
+  console.log(data);
 
   useEffect(() => {
-    setData(obtainReviews(link));
-
-    // console.log(data);
-  }, [data]);
+    setData(obtainReviews(0)); // 0 -> to receive from database, > 1 -> to receive from API
+  }, []);
 
   return (
     <section className={style.reviews_container}>
       <h2>What people says about me</h2>
       {
-        // reviews.map(
-        //   ({
-        //     author_name,
-        //     author_url,
-        //     profile_photo_url,
-        //     rating,
-        //     relative_time_description,
-        //     text
-        //   }) => {
-        //     return (
-        //       <Link to={author_url} key={author_url} target='_blank'>
-        //         <article className={style.card_review_container}>
-        //           <div className={style.user_profile}>
-        //             <img src={profile_photo_url} alt='profile-photo' />
-        //             <div className={style.user_profile_data}>
-        //               <h4>{author_name}</h4>
-        //               <p>6 reviews · 9 photos</p> {/* //TODO: change when the item is ready, it's just a scheme */}
+        // !reviews
+        //   ? <div className={style.loading}>
+        //       <img src={Loader} alt='loader' width={256}/>
+        //     </div>
+        //   : reviews.map(
+        //     ({
+        //       authorAttribution,
+        //       rating,
+        //       relativePublishTimeDescription,
+        //       originalText
+        //     }) => {
+        //       return (
+        //         <Link to={authorAttribution.uri} key={authorAttribution.uri} target='_blank'>
+        //           <article className={style.card_review_container}>
+        //             <div className={style.user_profile}>
+        //               <img src={authorAttribution.photoUri} alt='profile-photo' />
+        //               <div className={style.user_profile_data}>
+        //                 <h4>{authorAttribution.name}</h4>
+        //                 <p>6 reviews · 9 photos</p> {/* //TODO: change when the item is ready, it's just a scheme */}
+        //               </div>
         //             </div>
-        //           </div>
-        //           <div className={style.user_review_container}>
-        //             <dir className={style.user_review_score_and_date}>
-        //               <span className={style.score_review}></span>
-        //               <span className={style.date_review}>{relative_time_description}</span>
-        //             </dir>
-        //             <p className={style.user_review_content}>{text.length > 240 ? text.slice(0, 240) + '...' : text}</p>
-        //           </div>
-        //         </article>
-        //       </Link>
-        //     );
-        //   }
-        // )
+        //             <div className={style.user_review_container}>
+        //               <dir className={style.user_review_score_and_date}>
+        //                 <span className={style.score_review}></span>
+        //                 <span className={style.date_review}>{relativePublishTimeDescription}</span>
+        //               </dir>
+        //               <p className={style.user_review_content}>{originalText.text.length > 240 ? originalText.text.slice(0, 240) + '...' : originalText.text}</p>
+        //             </div>
+        //           </article>
+        //         </Link>
+        //       );
+        //     }
+        //   )
       }
     </section>
   );
