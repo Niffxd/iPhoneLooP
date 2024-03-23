@@ -7,7 +7,7 @@ const fields = [
   'reviews'
 ].join(',');
 
-let reviewsCache // This variable avoid to refetch data from server 
+let reviewsCache; // This variable avoid to refetch data from server
 
 const link = `https://places.googleapis.com/v1/places/${placeID}?fields=${fields}&languageCode=${language}&key=${apiKey}`;
 
@@ -17,23 +17,23 @@ const obtainReviews = async attempts => {
 
     return reviews;
   } else {
-    if(!reviewsCache) {
+    if (!reviewsCache) {
       const response = await fetch(link);
       const result = await response.json();
       const { reviews } = result;
-      reviewsCache = reviews
+      reviewsCache = reviews;
 
       if (Object.hasOwn(result, 'error')) {
-        if(attempts > 1) {
+        if (attempts > 1) {
           obtainReviews(attempts - 1);
         } else {
           // At this point we send to the client an empty response because the server doesn't respond OK. Like 400 errors.
-          return []
+          return [];
         }
       } else {
         return reviews;
       }
-    } else return reviewsCache
+    } else return reviewsCache;
   }
 };
 
