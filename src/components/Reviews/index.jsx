@@ -7,15 +7,17 @@ import style from './Reviews.module.css';
 export default function Reviews () {
   const [data, setData] = useState([]);
 
+  console.log(data);
+
   useEffect(() => {
-    fetchData(setData, 0); // < 0 -> to test loading, 0 -> to receive from database, > 1 -> to receive from API
+    fetchData(setData, 0); // < 0 -> to test loading, 0 -> to receive from database, > 1 -> attempts to try to receive data from API
   }, []);
 
   return (
     <section className={style.reviews_container}>
       <h2>What people says about me</h2>
       {
-        !data.length
+        !data.length || !data
           ? <div className={style.loading}>
               <img src={Loader} alt='loader' width={256}/>
             </div>
