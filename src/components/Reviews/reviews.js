@@ -9,7 +9,7 @@ const fields = [
 
 const link = `https://places.googleapis.com/v1/places/${placeID}?fields=${fields}&languageCode=${language}&key=${apiKey}`;
 
-export const obtainReviews = async attempts => {
+const obtainReviews = async attempts => {
   if (!attempts) {
     const { reviews } = db;
 
@@ -26,3 +26,12 @@ export const obtainReviews = async attempts => {
     }
   }
 };
+
+export async function fetchData (setData, attempts) {
+  if (attempts < 0) {
+    return [];
+  } else {
+    const response = await obtainReviews(attempts);
+    setData(response);
+  }
+}
