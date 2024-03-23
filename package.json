@@ -18,11 +18,11 @@
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
+    "@types/react": "^18.2.69",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "eslint-config-semistandard": "^17.0.0",
-    "vite": "^5.1.6"
+    "vite": "^5.2.4"
   },
   "eslintConfig": {
     "extends": "eslint-config-semistandard"

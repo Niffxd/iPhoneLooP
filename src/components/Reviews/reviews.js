@@ -1,11 +1,13 @@
 import db from '../../assets/json/db_test.json'; // In case of error loading json file
 
-const apiKey = 'AIzaSyAPrOaFXjeEN_fjQH_VEU2t4rHpGYrDcIg';
-const placeID = 'ChIJb2KloCCvMioRAHmRSPx1T9w';
+const apiKey = import.meta.env.VITE_API_KEY;
+const placeID = import.meta.env.VITE_PLACE_ID;
 const language = 'en';
 const fields = [
   'reviews'
 ].join(',');
+
+let reviewsCache // This variable avoid to refetch data from server 
 
 const link = `https://places.googleapis.com/v1/places/${placeID}?fields=${fields}&languageCode=${language}&key=${apiKey}`;
 
@@ -15,15 +17,23 @@ const obtainReviews = async attempts => {
 
     return reviews;
   } else {
-    const response = await fetch(link);
-    const result = await response.json();
-    const { reviews } = result;
+    if(!reviewsCache) {
+      const response = await fetch(link);
+      const result = await response.json();
+      const { reviews } = result;
+      reviewsCache = reviews
 
-    if (Object.hasOwn(result, 'error')) {
-      obtainReviews(attempts - 1);
-    } else {
-      return reviews;
-    }
+      if (Object.hasOwn(result, 'error')) {
+        if(attempts > 1) {
+          obtainReviews(attempts - 1);
+        } else {
+          // At this point we send to the client an empty response because the server doesn't respond OK. Like 400 errors.
+          return []
+        }
+      } else {
+        return reviews;
+      }
+    } else return reviewsCache
   }
 };
 
