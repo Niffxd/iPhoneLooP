@@ -34,7 +34,7 @@ export default function Reviews () {
                     <div className={style.user_profile}>
                       <img src={authorAttribution.photoUri} alt='profile-photo' />
                       <div className={style.user_profile_data}>
-                        <h4>{authorAttribution.name}</h4>
+                        <h4>{authorAttribution.displayName}</h4>
                         <p>6 reviews · 9 photos</p> {/* //TODO: change when the item is ready, it's just a scheme */}
                       </div>
                     </div>
