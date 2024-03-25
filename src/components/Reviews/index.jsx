@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; //eslint-disable-line
-import Loader from '../../assets/loaders/loader.svg';
 import { fetchData } from './reviews';
+import Loader from '../../assets/loaders/loader.svg';
 import style from './Reviews.module.css';
 
 export default function Reviews () {
   const [data, setData] = useState([]);
-
-  console.log(data);
 
   useEffect(() => {
     fetchData(setData, 0); // < 0 -> to test loading, 0 -> to receive from database, > 1 -> attempts to try to receive data from API
