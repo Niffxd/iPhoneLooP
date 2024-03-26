@@ -73,8 +73,3 @@
 .user_review_content {
   word-break: break-word;
 }
-
-.loading {
-  display: flex;
-  justify-content: center;
-}

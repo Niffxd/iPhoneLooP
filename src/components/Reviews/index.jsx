@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; //eslint-disable-line
 import { fetchData } from './reviews';
-import Loader from '../../assets/loaders/loader.svg';
+import Loading from '../Loader'; //eslint-disable-line
 import style from './Reviews.module.css';
 
 export default function Reviews () {
@@ -16,9 +16,7 @@ export default function Reviews () {
       <h2>What people says about me</h2>
       {
         !data.length || !data
-          ? <div className={style.loading}>
-              <img src={Loader} alt='loader' width={256}/>
-            </div>
+          ? <Loading />
           : data.map(
             ({
               authorAttribution,
