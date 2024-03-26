@@ -92,7 +92,7 @@
 
 .link > li,
 .link_to_book {
-  padding: 20px;
+  padding: 24px;
   color: var(--color-black);
   font-weight: lighter;
   animation: .5s opacity;
@@ -103,7 +103,7 @@
   display: flex;
   justify-content: center;
   background-color: var(--color-logo-2);
-  margin: 1rem;
+  margin: 24px;
   border-radius: 1rem;
 }
 
