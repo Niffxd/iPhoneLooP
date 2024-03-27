@@ -1,12 +1,15 @@
 .ready_container {
+  background-color: var(--color-logo-2);
+  padding: 12px 24px;
+  margin: 24px;
   > h1 {
-    margin: 24px 0;
-    color: var(--color-secondary);
+    margin: 12px 0 24px;
+    color: var(--color-main);
     text-align: center;
   }
 
   > p {
-    color: var(--color-secondary);
+    color: var(--color-main);
   }
 }
 
