@@ -6,17 +6,20 @@ export default function ReadyForYourRepair () {
   const BookNowStyle = {
     width: '100%',
     margin: '8px 0',
-    borderRadius: '5px'
+    backgroundColor: 'var(--color-main)',
+    borderRadius: '5px',
+    color: 'white',
+    fontWeight: '400'
   };
 
   const commonStyle = {
     width: '100%',
     margin: '8px 0',
     borderRadius: '5px',
-    border: '1px solid var(--color-logo-2)',
+    border: '1px solid var(--color-main)',
     backgroundColor: 'transparent',
-    color: 'var(--color-white)',
-    fontWeight: '400'
+    color: 'var(--color-main)',
+    fontWeight: 'bolder'
   };
 
   const getLink = obtainLink('whatsapp');

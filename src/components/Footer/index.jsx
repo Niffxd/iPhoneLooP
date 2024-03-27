@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'; //eslint-disable-line
 import { contactItems, foundSVG } from './contactItems';
-import ReadyForYourRepair from '../ReadyForYourRepair'; // eslint-disable-line
+// import ReadyForYourRepair from '../ReadyForYourRepair'; // eslint-disable-line
 // import BtnBook from '../BtnBook'; // eslint-disable-line
 import style from './Footer.module.css';
 
 export default function Footer () {
   return (
     <footer className={style.footer_container}>
-      <ReadyForYourRepair />
+      {/* <ReadyForYourRepair /> */}
       <div className={style.contact_container}>
         {
           contactItems.map(({ name, link, text }) => {
