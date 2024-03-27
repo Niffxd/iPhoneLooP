@@ -1,4 +1,5 @@
 .ready_container {
+  text-align: center;
   background-color: var(--color-logo-2);
   padding: 12px 24px;
   margin: 24px;
