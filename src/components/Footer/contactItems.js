@@ -12,6 +12,8 @@ const svgs = {
   location
 };
 
+const whatsappText = 'Hello I would like to fix my iPhone';
+
 export const foundSVG = icon => {
   return svgs[icon.toLowerCase()];
 };
@@ -19,7 +21,7 @@ export const foundSVG = icon => {
 export const contactItems = [
   {
     name: 'WhatsApp',
-    link: 'https://api.whatsapp.com/send?phone=61466618127',
+    link: `https://api.whatsapp.com/send?phone=61466618127&text=${whatsappText.replace(' ', '%20')}`,
     text: '+61 466 618 127'
   },
   {
