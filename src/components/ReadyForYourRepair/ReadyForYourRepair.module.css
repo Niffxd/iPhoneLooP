@@ -1,7 +1,7 @@
 .ready_container {
   text-align: center;
   background-color: var(--color-logo-2);
-  opacity: .8;
+  /* opacity: .8; */
   padding: 24px 48px 36px;
   /* margin: 24px; */
   > h1 {
