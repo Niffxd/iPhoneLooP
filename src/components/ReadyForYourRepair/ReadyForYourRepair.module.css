@@ -1,9 +1,7 @@
 .ready_container {
   text-align: center;
   background-color: var(--color-logo-2);
-  opacity: .8;
-  padding: 12px 24px;
-  margin: 24px;
+  padding: 24px 48px 36px;
   > h1 {
     margin: 12px 0 24px;
     color: var(--color-main);
