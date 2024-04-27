@@ -1,0 +1,102 @@
+[
+  {
+    "name": "15 Pro Max",
+    "image": "./15_pro.png"
+  },
+  {
+    "name": "15 Pro",
+    "image": "./15_pro.png"
+  },
+  {
+    "name": "15 Plus",
+    "image": "./15.png"
+  },
+  {
+    "name": "15",
+    "image": "./15.png"
+  },
+  {
+    "name": "14 Pro Max",
+    "image": "./14_pro.png"
+  },
+  {
+    "name": "14 Pro",
+    "image": "./14_pro.png"
+  },
+  {
+    "name": "14 Plus",
+    "image": "./14.png"
+  },
+  {
+    "name": "14",
+    "image": "./14.png"
+  },
+  {
+    "name": "SE 2022",
+    "image": "./se2022.png"
+  },
+  {
+    "name": "13 Pro Max",
+    "image": "./13_pro.png"
+  },
+  {
+    "name": "13 Pro",
+    "image": "./13_pro.png"
+  },
+  {
+    "name": "13",
+    "image": "./13.png"
+  },
+  {
+    "name": "13 Mini",
+    "image": "./13.png"
+  },
+  {
+    "name": "12 Pro Max",
+    "image": "./12_pro.png"
+  },
+  {
+    "name": "12 Pro",
+    "image": "./12_pro.png"
+  },
+  {
+    "name": "12",
+    "image": "./12.png"
+  },
+  {
+    "name": "12 Mini",
+    "image": "./12.png"
+  },
+  {
+    "name": "SE 2020",
+    "image": "./se2020.png"
+  },
+  {
+    "name": "11 Pro Max",
+    "image": "./11_pro_max.png"
+  },
+  {
+    "name": "11 Pro",
+    "image": "./11_pro.png"
+  },
+  {
+    "name": "11",
+    "image": "./11.png"
+  },
+  {
+    "name": "XS Max",
+    "image": "./xs.png"
+  },
+  {
+    "name": "XS",
+    "image": "./xs.png"
+  },
+  {
+    "name": "XR",
+    "image": "./xr.png"
+  },
+  {
+    "name": "X",
+    "image": "./x.png"
+  }
+]
