@@ -36,8 +36,8 @@ export const contactItems = [
   },
   {
     name: 'Location',
-    link: 'https://maps.app.goo.gl/w75vFrQviGR1rMCJ8',
-    text: 'Mount Hawthorn, Perth'
+    link: 'https://maps.app.goo.gl/o2ex14VoRMwAEEeh6',
+    text: '32 Elizabeth Street. North Perth'
   },
   {
     name: 'Mail',
