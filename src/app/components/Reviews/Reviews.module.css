@@ -1,0 +1,72 @@
+/*
+
+:root {
+  --color-main: #2c2c2c;
+  --color-secondary: #e8e8e8;
+  --color-logo-1: #2c2c38;
+  --color-logo-2: #00DBA3;
+  --color-option-1: #20A4F3;
+  --color-option-2: #DC6ACF;
+  --color-option-3: #90D7FF;
+  --color-white: #fafafa;
+  --color-black: #212121;
+}
+
+*/
+
+.reviews_container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  /* padding-top: 0; */
+  background-color: var(--color-main-opacity30);
+  > h2 {
+    text-align: center;
+  }
+}
+
+.card_review_container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.user_profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user_profile_data {
+  > h4 {
+    margin-bottom: 5px;
+  }
+  > p {
+    color: gray;
+  }
+}
+
+.user_review_container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.user_review_score_and_date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: gray;
+}
+
+.score_review {
+  display: block;
+  width: calc(calc(12px + 2px) * 5 + calc(12px / 2) * 0);
+  height: 11.4px;
+  background-image: url('../../assets/images/icons/star.svg');
+}
+
+.user_review_content {
+  word-break: break-word;
+}
