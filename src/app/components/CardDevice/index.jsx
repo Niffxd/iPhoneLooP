@@ -6,7 +6,7 @@ export default function CardDevice ({ image, deviceName }) {
   return (
     <Link href={`services/${deviceName}`} className={style.card_container}>
       <div className={style.card}>
-        <Image src={image} alt={`${deviceName.replaceAll(' ', '_').toLowerCase()}_image`} />
+        <Image className={style.image} src={image} alt={`${deviceName.replaceAll(' ', '_').toLowerCase()}_image`} />
         <p>iPhone {deviceName}</p>
       </div>
     </Link>

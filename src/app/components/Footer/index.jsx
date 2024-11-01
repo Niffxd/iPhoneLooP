@@ -13,7 +13,7 @@ export default function Footer () {
               <Link href={link} target='_blank' id={style[name.toLowerCase()]} key={name}>
                 <article className={style.card}>
                   <div className={style.icon}>
-                    <Image src={foundSVG(name)} alt={name} priority />
+                    <Image className={style.image} src={foundSVG(name)} alt={name} priority />
                   </div>
                   {
                     name.toLowerCase() === 'whatsapp' || name.toLowerCase() === 'location'

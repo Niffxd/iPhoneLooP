@@ -2,20 +2,22 @@
   background-color: var(--color-secondary);
   padding: 2.1rem;
   padding-bottom: 0;
-  > p {
-    padding-right: 2rem;
-    font-size: 1.2rem;
-    margin: 2rem 0;
-  }
+}
+
+.container > p {
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  margin: 2rem 0;
 }
 
 .container_image {
   display: flex;
   justify-content: flex-end;
-  > img {
-    margin: 2em 0;
-    width: auto;
-    height: 200px;
-    filter: drop-shadow(0px 22px 29px #000000);
-  }
+}
+
+.container_image > img {
+  margin: 2em 0;
+  width: auto;
+  height: 200px;
+  filter: drop-shadow(0px 22px 29px #000000);
 }

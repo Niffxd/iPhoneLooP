@@ -19,11 +19,11 @@
   flex-direction: column;
   gap: 32px;
   padding: 24px;
-  /* padding-top: 0; */
   background-color: var(--color-main-opacity30);
-  > h2 {
-    text-align: center;
-  }
+}
+
+.reviews_container > h2 {
+  text-align: center;
 }
 
 .card_review_container {
@@ -38,13 +38,12 @@
   gap: 12px;
 }
 
-.user_profile_data {
-  > h4 {
-    margin-bottom: 5px;
-  }
-  > p {
-    color: gray;
-  }
+.user_profile_data > h4 {
+  margin-bottom: 5px;
+}
+
+.user_profile_data > p {
+  color: gray;
 }
 
 .user_review_container {

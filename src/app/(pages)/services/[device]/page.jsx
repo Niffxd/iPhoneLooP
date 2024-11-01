@@ -8,7 +8,7 @@ import style from './Device.module.css';
 export default function Device () {
   const { device } = useParams();
   
-  const [currentDevice, setCurrentDevice] = useState(device.replaceAll('%20', ' '));
+  const [currentDevice, setCurrentDevice] = useState(device.replaceAll('%20', ' ')); // eslint-disable-line
   const [currentPrice, setCurrentPrice] = useState(0);
 
   const handlerSummation = (checked, price) => {

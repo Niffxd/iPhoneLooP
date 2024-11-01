@@ -10,8 +10,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  > img {
-    max-height: 150px;
-    width: auto;
-  }
+}
+
+.card .image {
+  max-height: 150px;
+  width: auto;
 }
