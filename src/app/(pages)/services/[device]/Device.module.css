@@ -1,36 +1,36 @@
 .device_repair_container {
-  padding: 24;
+  padding: 24px;
 }
 
 .form_budget h4 {
-  margin-bottom: 20;
+  margin-bottom: 20px;
 }
 
 .repair_option_container, .total {
   display: flex;
   justify-content: space-between;
-  margin-top: 10;
-  margin-bottom: 10;
-  padding-left: 20;
-  padding-right: 20;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .total {
-  margin-top: 20;
+  margin-top: 20px;
 }
 
 .repair_option_container input[type="checkbox"] {
-  margin-right: 10;
+  margin-right: 10px;
   cursor: pointer;
 }
 
 .submit_button {
   width: 100%;
-  border: 1 solid black;
+  border: 1px solid black;
   border-radius: 10;
-  padding-top: 20;
-  padding-bottom: 20;
-  margin-top: 10;
-  margin-bottom: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: medium;
 }
