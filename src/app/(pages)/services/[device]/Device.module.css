@@ -1,0 +1,36 @@
+.device_repair_container {
+  padding: 24;
+}
+
+.form_budget h4 {
+  margin-bottom: 20;
+}
+
+.repair_option_container, .total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10;
+  margin-bottom: 10;
+  padding-left: 20;
+  padding-right: 20;
+}
+
+.total {
+  margin-top: 20;
+}
+
+.repair_option_container input[type="checkbox"] {
+  margin-right: 10;
+  cursor: pointer;
+}
+
+.submit_button {
+  width: 100%;
+  border: 1 solid black;
+  border-radius: 10;
+  padding-top: 20;
+  padding-bottom: 20;
+  margin-top: 10;
+  margin-bottom: 10;
+  font-size: medium;
+}
