@@ -2,15 +2,16 @@
   text-align: center;
   background-color: var(--color-logo-2);
   padding: 24px 48px 36px;
-  > h1 {
-    margin: 12px 0 24px;
-    color: var(--color-main);
-    text-align: center;
-  }
+}
 
-  > p {
-    color: var(--color-main);
-  }
+.ready_container > h1 {
+  margin: 12px 0 24px;
+  color: var(--color-main);
+  text-align: center;
+}
+
+.ready_container > p {
+  color: var(--color-main);
 }
 
 .btn_container {

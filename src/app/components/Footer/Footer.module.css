@@ -70,11 +70,12 @@
   align-items: center;
   padding: 1rem;
   border-radius: 50%;
-  > img {
-    width: 32px;
-    height: 32px;
-  }
   background-color: var(--color-logo-2);
+}
+
+.icon .image {
+  width: 32px;
+  height: 32px;
 }
 
 .information {

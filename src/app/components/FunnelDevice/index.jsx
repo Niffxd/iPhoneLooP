@@ -13,11 +13,11 @@ export default function FunnelDevice () {
   return (
     <section className={style.funnel_device_container}>
       <div className={style.important_text}>
-        <h1>Why Phone Loop?</h1>
+        <h1 className={style.title1}>Why Phone Loop?</h1>
         {
           paragraphs.map((paragraph, index) => {
             return (
-              <p key={index}>
+              <p key={index} className={style.paragraph1}>
                 <span>{index + 1} </span>
                 {paragraph}
               </p>
