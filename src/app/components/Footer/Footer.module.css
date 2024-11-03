@@ -30,6 +30,7 @@
     "location location location"
     "facebook instagram mail";
   gap: 0 1rem;
+
   align-items: center;
   padding: 1rem;
   padding-bottom: 0;
@@ -60,6 +61,14 @@
   align-items: center;
   gap: 12px;
   margin: 1rem 0;
+}
+
+#instagram > article {
+  justify-content: center;
+}
+
+#mail > article {
+  justify-content: flex-end;
 }
 
 .icon {
