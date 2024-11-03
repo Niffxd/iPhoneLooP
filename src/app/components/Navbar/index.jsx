@@ -8,7 +8,7 @@ export default function Navbar () {
   return (
     <nav className={style.navbar_container}>
       <Link href='/'>
-        <Image className={style.logo} src={logo} alt="logo"/>
+        <Image className={style.logo} src={logo} alt="logo" loading='lazy'/>
       </Link>
       <MenuNav />
     </nav>

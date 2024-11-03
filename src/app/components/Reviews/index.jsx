@@ -30,7 +30,7 @@ export default function Reviews () {
                 <Link href={authorAttribution.uri} key={authorAttribution.uri} target='_blank'>
                   <article className={style.card_review_container}>
                     <div className={style.user_profile}>
-                      <Image src={authorAttribution.photoUri} alt='profile-photo' width={48} height={48}/>
+                      <Image src={authorAttribution.photoUri} alt='profile-photo' width={48} height={48} loading='lazy'/>
                       <div className={style.user_profile_data}>
                         <h4>{authorAttribution.displayName}</h4>
                       </div>

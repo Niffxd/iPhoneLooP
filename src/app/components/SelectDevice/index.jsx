@@ -1,4 +1,4 @@
-import { devices } from '@/components/Devices/devices.js';
+import { devices } from '@/components/Device/devices.js';
 import CardDevice from '../CardDevice'; // eslint-disable-line
 import style from './SelectDevice.module.css';
 

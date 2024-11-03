@@ -5,7 +5,7 @@ import style from './Loader.module.css';
 export default function Loading () {
   return (
     <div className={style.loading}>
-      <Image src={LoadingSVG} alt='loader' width={256}/>
+      <Image src={LoadingSVG} alt='loader' width={256} loading='lazy'/>
     </div>
   );
 }
