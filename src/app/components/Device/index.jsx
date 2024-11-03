@@ -55,18 +55,20 @@ export default function Device() {
               })
         }
         <br />
-        <hr />
-        <div className={style.total}>
-          <span><b>Total</b></span>
-          <span><b>AUD {currentPrice}</b></span>
+        <div className={style.total_container}>
+          <hr />
+          <div className={style.total}>
+            <span><b>Total</b></span>
+            <span><b>AUD {currentPrice}</b></span>
+          </div>
+          <button
+            type='submit'
+            className={style.submit_button}
+            onClick={(e) => handleSubmitForm(e)}
+          >
+            Choose your repair service
+          </button>
         </div>
-        <button
-          type='submit'
-          className={style.submit_button}
-          onClick={(e) => handleSubmitForm(e)}
-        >
-          Choose your repair service
-        </button>
       </form>
     </div>
   );

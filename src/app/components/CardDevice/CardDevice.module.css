@@ -16,3 +16,7 @@
   max-height: 150px;
   width: auto;
 }
+
+.card > p {
+  text-align: center;
+}
