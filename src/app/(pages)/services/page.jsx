@@ -1,4 +1,4 @@
-import SimpleComponent from '@/components/SimpleComponent';
+// import SimpleComponent from '@/components/SimpleComponent';
 import SelectDevice from '@/components/SelectDevice';
 import FAQs from '@/components/FAQs';
 
