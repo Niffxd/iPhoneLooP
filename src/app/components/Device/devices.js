@@ -26,56 +26,45 @@ export const devices = [
 		name: "15 Pro Max",
 		image: image1,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 120,
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				price: 40,
 			},
-			{
-				name: "Back Camera Replacement",
-				price: 260,
-				description: "Ask for stock please.",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 280,
-			},
-			{
-				name: "Motherboard repair",
-				price: 600,
-			},
-			{
-				name: "Soft OLED Screen Replacement",
-				price: 480,
-				description: "Ask for stock please.",
-			},
+			{ name: "SOFT OLED SCREEN", price: 470 },
+			{ name: "LCD SCREEN", price: 340 },
+			{ name: "BATTERY", price: 190 },
+			{ name: "BACK GLASS", price: 260 },
+			{ name: "CHARGING PORT (GENUINE)", price: 220 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 180 },
+			{ name: "MICROPHONE", price: 220 },
+			{ name: "REAR CAMERA (GENUINE)", price: 260 },
+			{ name: "MOTHERBOARD REPAIR", price: 550 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 190 },
+			{ name: "REAR CAMERA LENS", price: 110 },
 		],
 	},
 	{
 		name: "15 Pro",
 		image: image1,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 120,
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				price: 40,
 			},
-			{
-				name: "Back Camera Replacement",
-				price: 260,
-				description: "Ask for stock please.",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 280,
-			},
-			{
-				name: "Motherboard repair",
-				price: 580,
-			},
-			{
-				name: "Soft OLED Screen Replacement",
-				price: 430,
-				description: "Ask for stock please.",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 590 },
+			{ name: "SOFT OLED SCREEN", price: 410 },
+			{ name: "LCD SCREEN", price: 300 },
+			{ name: "BATTERY", price: 190 },
+			{ name: "BACK GLASS", price: 260 },
+			{ name: "CHARGING PORT (GENUINE)", price: 190 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 180 },
+			{ name: "MICROPHONE", price: 180 },
+			{ name: "REAR CAMERA (GENUINE)", price: 250 },
+			{ name: "MOTHERBOARD REPAIR", price: 550 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 190 },
+			{ name: "REAR CAMERA LENS", price: 110 },
 		],
 	},
 	// {
@@ -86,324 +75,114 @@ export const devices = [
 		name: "15",
 		image: image2,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 110,
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				price: 40,
 			},
-			{
-				name: "Back Glass Replacement",
-				price: 270,
-			},
-			{
-				name: "Soft OLED Screen Replacement",
-				price: 360,
-			},
+			{ name: "SOFT OLED SCREEN", price: 340 },
+			{ name: "LCD SCREEN", price: 270 },
+			{ name: "BATTERY", price: 180 },
+			{ name: "BACK GLASS", price: 260 },
+			{ name: "CHARGING PORT (GENUINE)", price: 180 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 180 },
+			{ name: "MICROPHONE", price: 180 },
+			{ name: "REAR CAMERA (GENUINE)", price: 200 },
+			{ name: "MOTHERBOARD REPAIR", price: 500 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 190 },
+			{ name: "REAR CAMERA LENS", price: 100 },
 		],
 	},
 	{
 		name: "14 Pro Max",
 		image: image3,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 80,
-				description: "Rear camera lens replacement takes aprox 1 hour.",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 230,
-				description: "OEM Part. Please ask for stock",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 190,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 170,
-				description: "It takes 2 hours aprox.",
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 180,
-				description: "OEM Part. Please ask for stock.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Front Camera Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 350,
-				description: "Ask for stock.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 380,
-				description: "Motherboard repairs takes from 2 to 7 working days",
-			},
-			{
-				name: "Refub/Genuine Screen Replacement",
-				price: 650,
-				description: "OEM Screen. Please ask for stock.",
-			},
-			{
-				name: "Soft OLED Screen Replacement",
-				price: 450,
-			},
-			{
-				name: "Speaker Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 650 },
+			{ name: "SOFT OLED SCREEN", price: 450 },
+			{ name: "LCD SCREEN", price: 340 },
+			{ name: "BATTERY", price: 160 },
+			{ name: "BACK GLASS", price: 190 },
+			{ name: "CHARGING PORT (GENUINE)", price: 180 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 170 },
+			{ name: "MICROPHONE", price: 180 },
+			{ name: "REAR CAMERA (GENUINE)", price: 230 },
+			{ name: "MOTHERBOARD REPAIR", price: 400 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 180 },
+			{ name: "REAR CAMERA LENS", price: 80 },
 		],
 	},
 	{
 		name: "14 Pro",
 		image: image3,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 80,
-				description: "Rear camera lens replacement takes aprox 1 hour.",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 230,
-				description: "OEM Part. Please ask for stock",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 190,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 160,
-				description: "It takes 2 hours aprox.",
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 170,
-				description: "OEM Part. Please ask for stock.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Earpiece Problem",
-				price: 160,
-			},
-			{
-				name: "Front Camera Replacement",
-				price: 160,
-				description: "After replacement the Face ID stop working.",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 330,
-				description: "Ask for stock.",
-			},
-			{
-				name: "Microphone Replacement",
-				price: 170,
-				description: "OEM Part. takes 2 hs aprox.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 380,
-				description: "Motherboard repairs takes from 2 to 7 working days",
-			},
-			{
-				name: "Refub/Genuine Screen Replacement",
-				price: 630,
-				description: "OEM Screen. Please ask for stock.",
-			},
-			{
-				name: "Soft OLED Screen Replacement",
-				price: 430,
-				description: "Similar to original.",
-			},
-			{
-				name: "Speaker Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 600 },
+			{ name: "SOFT OLED SCREEN", price: 390 },
+			{ name: "LCD SCREEN", price: 290 },
+			{ name: "BATTERY", price: 150 },
+			{ name: "BACK GLASS", price: 190 },
+			{ name: "CHARGING PORT (GENUINE)", price: 180 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 160 },
+			{ name: "MICROPHONE", price: 180 },
+			{ name: "REAR CAMERA (GENUINE)", price: 220 },
+			{ name: "MOTHERBOARD REPAIR", price: 390 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 180 },
+			{ name: "REAR CAMERA LENS", price: 80 },
 		],
 	},
 	{
 		name: "14 Plus",
 		image: image4,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 190,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 160,
-				description: "Please ask for stock.",
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 160,
-				description: "OEM Part. Please ask for stock.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Front Camera Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 190,
-				description: "LCD Screen.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 360,
-				description: "Motherboard repairs takes from 1 to 5 working days",
-			},
-			{
-				name: "Proximity sensor and Ambient light Flex",
-				price: 160,
-			},
-			{
-				name: "Speaker Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 390 },
+			{ name: "SOFT OLED SCREEN", price: 290 },
+			{ name: "LCD SCREEN", price: 170 },
+			{ name: "BATTERY", price: 150 },
+			{ name: "BACK GLASS", price: 180 },
+			{ name: "CHARGING PORT (GENUINE)", price: 160 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 140 },
+			{ name: "MICROPHONE", price: 160 },
+			{ name: "REAR CAMERA (GENUINE)", price: 190 },
+			{ name: "MOTHERBOARD REPAIR", price: 360 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 130 },
+			{ name: "REAR CAMERA LENS", price: 75 },
 		],
 	},
 	{
 		name: "14",
 		image: image4,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 80,
-				description: "Rear camera lens replacement takes aprox 1 hour",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 200,
-				description: "OEM Part. It takes 45 minutes aprox.",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 180,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 160,
-				description: "Please ask for stock.",
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 160,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 50,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Earpiece speaker flex",
-				price: 160,
-				description: "OEM Part. Takes 1 hour aprox.",
-			},
-			{
-				name: "Front Camera Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 190,
-				description: "It takes 1hour aprox.",
-			},
-			{
-				name: "Microphone Replacement",
-				price: 160,
-				description: "OEM Part. It takes 2 hour aprox.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 360,
-				description: "Motherboard repairs takes from 1 to 5 working days",
-			},
-			{
-				name: "Soft Oled Screen Replacement iPhone 14",
-				price: 290,
-				description: "Soft Oled screen similar to original.",
-			},
-			{
-				name: "Speaker Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 360 },
+			{ name: "SOFT OLED SCREEN", price: 270 },
+			{ name: "LCD SCREEN", price: 160 },
+			{ name: "BATTERY", price: 150 },
+			{ name: "BACK GLASS", price: 180 },
+			{ name: "CHARGING PORT (GENUINE)", price: 160 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 140 },
+			{ name: "MICROPHONE", price: 160 },
+			{ name: "REAR CAMERA (GENUINE)", price: 190 },
+			{ name: "MOTHERBOARD REPAIR", price: 360 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 130 },
+			{ name: "REAR CAMERA LENS", price: 75 },
 		],
 	},
 	// {
@@ -414,335 +193,114 @@ export const devices = [
 		name: "13 Pro Max",
 		image: image6,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 70,
-				description: "Rear camera lens replacement takes aprox 1 hour",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 230,
-				description: "OEM Part. It takes 45 minutes aprox.",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 160,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 160,
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 160,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Flashlight Replacement",
-				price: 130,
-				description: "OEM Part. Takes 1 hour aprox.",
-			},
-			{
-				name: "Front Camera Replacement",
-				price: 140,
-				description:
-					"OEM Part. When you replace the front camera in these models the face id stop working. Takes 45 minutes.",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 310,
-				description: "Ask for stock",
-			},
-			{
-				name: "Microphone Replacement",
-				price: 160,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 350,
-				description: "Motherboard repairs takes from 1 to 5 working days",
-			},
-			{
-				name: "OLED Screen replacement",
-				price: 390,
-			},
-			{
-				name: "Refub/Genuine Screen Replacement",
-				price: 600,
-				description: "OEM Screen. Please ask for stock.",
-			},
-			{
-				name: "Speaker Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Wireless NFC (Tap payments)",
-				price: 120,
-			},
-			{
-				name: "Yellow/green screen repair",
-				price: 300,
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 530 },
+			{ name: "SOFT OLED SCREEN", price: 350 },
+			{ name: "LCD SCREEN", price: 290 },
+			{ name: "BATTERY", price: 150 },
+			{ name: "BACK GLASS", price: 160 },
+			{ name: "CHARGING PORT (GENUINE)", price: 160 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 140 },
+			{ name: "MICROPHONE", price: 160 },
+			{ name: "REAR CAMERA (GENUINE)", price: 230 },
+			{ name: "MOTHERBOARD REPAIR", price: 360 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 130 },
+			{ name: "REAR CAMERA LENS", price: 70 },
 		],
 	},
 	{
 		name: "13 Pro",
 		image: image6,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
+
 			{
-				name: "Back Camera Lens Replacement",
-				price: 70,
-				description: "Rear camera lens replacement takes aprox 1 hour",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 220,
-				description: "OEM Part. It takes 45 minutes aprox.",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 150,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 140,
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 150,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Face ID Repair",
-				price: 250,
-			},
-			{
-				name: "Front Camera Replacement",
-				price: 140,
-				description:
-					"OEM Part. When you replace the front camera in these models the face id stop working. Takes 45 minutes.",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 300,
-				description: "It takes 30 minutes aprox.",
-			},
-			{
-				name: "Microphone Replacement",
-				price: 150,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 340,
-				description: "Motherboard repairs takes from 1 to 5 working days",
-			},
-			{
-				name: "Refub/Genuine Screen Replacement",
-				price: 540,
-				description: "OEM Screen. Please ask for stock.",
-			},
-			{
-				name: "Soft Oled Screen replacement",
-				price: 380,
-			},
-			{
-				name: "Speaker Replacement",
-				price: 150,
-				description: "OEM Part.",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 460 },
+
+			{ name: "SOFT OLED SCREEN", price: 320 },
+
+			{ name: "LCD SCREEN", price: 220 },
+
+			{ name: "BATTERY", price: 140 },
+
+			{ name: "BACK GLASS", price: 150 },
+
+			{ name: "CHARGING PORT (GENUINE)", price: 150 },
+
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 140 },
+
+			{ name: "MICROPHONE", price: 150 },
+
+			{ name: "REAR CAMERA (GENUINE)", price: 230 },
+
+			{ name: "MOTHERBOARD REPAIR", price: 340 },
+
+			{ name: "FRONT CAMERA (GENUINE)", price: 130 },
+
+			{ name: "REAR CAMERA LENS", price: 70 },
 		],
 	},
 	{
 		name: "13",
 		image: image7,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "Back Camera Lens Replacement",
-				price: 65,
-				description: "Rear camera lens replacement takes aprox 1 hour",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 130,
-				description:
-					"OEM Part. It takes 45 minutes aprox. Please ask for stock",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 140,
-				description:
-					"We use the best quality of back glass (OEM) and takes aprox 2-3hs.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 130,
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 150,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Face ID Repair",
-				price: "Call for quote",
-			},
-			{
-				name: "Front Camera Replacement",
-				price: 140,
-				description:
-					"OEM Part. When you replace the front camera in these models the face id stop working. Takes 45 minutes.",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 180,
-				description: "It takes 30 minutes aprox.",
-			},
-			{
-				name: "Microphone Replacement",
-				price: 150,
-				description: "OEM Part. It takes 1 hour aprox.",
-			},
-			{
-				name: "Motherboard repair",
-				price: 270,
-				description: "Motherboard repairs takes from 1 to 5 working days",
-			},
-			{
-				name: "Refub/Genuine Screen Replacement",
-				price: 340,
-				description: "OEM Screen. Please ask for stock.",
-			},
-			{
-				name: "Vibrator",
-				price: 100,
-			},
-			{
-				name: "Volume Button Replacement",
-				price: 130,
-				description: "OEM Part.",
-			},
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 340 },
+			{ name: "AFTERMARKET LCD SCREEN", price: 160 },
+			{ name: "BATTERY", price: 125 },
+			{ name: "BACK GLASS", price: 140 },
+			{ name: "CHARGING PORT (GENUINE)", price: 150 },
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 120 },
+			{ name: "MICROPHONE", price: 140 },
+			{ name: "REAR CAMERA (GENUINE)", price: 130 },
+			{ name: "MOTHERBOARD REPAIR", price: 280 },
+			{ name: "FRONT CAMERA (GENUINE)", price: 120 },
+			{ name: "REAR CAMERA LENS", price: 60 },
 		],
 	},
 	{
 		name: "13 Mini",
 		image: image7,
 		prices: [
+			{ name: "DIAGNOSTIC", price: 40 },
+
 			{
-				name: "Back Camera Lens Replacement",
-				price: 65,
-				description: "Rear camera lens replacement takes aprox 1 hour",
-			},
-			{
-				name: "Back Camera Replacement",
-				price: 170,
-				description: "OEM Part. It takes 30 minutes aprox",
-			},
-			{
-				name: "Back Glass Replacement",
-				price: 140,
-				description: "It takes 2/3 hours aprox.",
-			},
-			{
-				name: "Battery Replacement",
-				price: 130,
-			},
-			{
-				name: "Charging Port Replacement",
-				price: 150,
-			},
-			{
-				name: "Cleaning",
+				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
 				price: 40,
-				description:
-					"Cleaning include charging port, loud speaker and front earpiece. This usually solves problems in the charging port. It takes aprox 15 minutes.",
 			},
-			{
-				name: "Diagnostic",
-				price: 40,
-				description:
-					"The diagnostic it's free if you do any repair after that.",
-			},
-			{
-				name: "Front Camera Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "LCD Screen Replacement",
-				price: 190,
-				description: "It takes 30 minutes aprox.",
-			},
-			{
-				name: "Loud Speaker Issue",
-				price: 150,
-			},
-			{
-				name: "Motherboard repair",
-				price: 290,
-				description: "Motherboard repairs takes from 1 to 5 working days",
-			},
-			{
-				name: "Refub/Genuine Screen Replacement",
-				price: 320,
-				description: "OEM Part. Takes 30 min aprox.",
-			},
-			{
-				name: "Speaker Replacement",
-				price: "Call for quote",
-			},
-			{
-				name: "Volume Button Replacement",
-				price: "Call for quote",
-			},
+
+			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED", price: 340 },
+
+			{ name: "AFTERMARKET LCD SCREEN", price: 170 },
+
+			{ name: "BATTERY", price: 125 },
+
+			{ name: "BACK GLASS", price: 140 },
+
+			{ name: "CHARGING PORT (GENUINE)", price: 150 },
+
+			{ name: "EARPIECE / SPEAKER (GENUINE)", price: 120 },
+
+			{ name: "MICROPHONE", price: 140 },
+
+			{ name: "REAR CAMERA (GENUINE)", price: 130 },
+
+			{ name: "MOTHERBOARD REPAIR", price: 280 },
+
+			{ name: "FRONT CAMERA (GENUINE)", price: 120 },
+
+			{ name: "REAR CAMERA LENS", price: 60 },
 		],
 	},
 	{
