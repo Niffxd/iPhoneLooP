@@ -1,0 +1,62 @@
+.delivery_card_container {
+  background-color: var(--color-white);
+  padding: 30px;
+  border: 1px solid var(--color-logo-2);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.divider {
+  margin: 10px 0;
+}
+
+.ul {
+  list-style: disc;
+}
+
+.ul > li {
+  font-size: 14px;
+  margin: 0 0 10px 20px
+}
+
+.buttons_container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.buttons_container > button {
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid var(--color-logo-1);
+  border-radius: 5px;
+  color: var(--color-logo-1);
+}
+
+.buttons_container > button:last-child {
+  background-color: var(--color-logo-2);
+  color: var(--color-logo-1);
+}
+
+.modal_content {
+  padding: 0 !important;
+  padding-bottom: 20px !important;
+}
+
+.modal_image {
+  width: 100%;
+  height: 240px;
+  background-size: cover !important;
+  background-position: 50% 30% !important;
+}
+
+.modal_content > p {
+  padding-left: 40px;
+}
+
+.modal_content > p:nth-child(2) {
+  font-weight: bold !important;
+  padding: 10px 20px;
+}
