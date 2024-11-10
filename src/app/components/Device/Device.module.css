@@ -73,17 +73,13 @@
 .submit_button {
 	width: 100%;
 	border: 1px solid var(--color-black);
-	background: var(--color-white);
-	color: var(--color-black);
+	background: var(--color-logo-2);
+	color: var(--color-logo-1);
 	border-radius: 10px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: medium;
-}
-
-.submit_button:hover {
-	filter: invert();
-	transition: all 0.1s ease;
+	text-align: center;
 }

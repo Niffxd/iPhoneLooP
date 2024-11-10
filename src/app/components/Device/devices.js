@@ -28,7 +28,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "SOFT OLED SCREEN", price: 470 },
@@ -50,7 +50,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 590 },
@@ -77,7 +77,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "SOFT OLED SCREEN", price: 340 },
@@ -99,7 +99,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 650 },
@@ -122,7 +122,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 600 },
@@ -145,7 +145,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 390 },
@@ -168,7 +168,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 360 },
@@ -195,7 +195,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 530 },
@@ -219,7 +219,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 460 },
@@ -253,7 +253,7 @@ export const devices = [
 		prices: [
 			{ name: "DIAGNOSTIC", price: 40 },
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{ name: "GENUINE OLED SCREEN (PULLED OR REFURBISHED)", price: 340 },
@@ -276,7 +276,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -312,7 +312,7 @@ export const devices = [
 				price: 40,
 			},
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{
@@ -376,7 +376,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -414,7 +414,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -454,7 +454,7 @@ export const devices = [
 				price: 40,
 			},
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 			{
@@ -553,7 +553,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -589,7 +589,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -625,7 +625,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -661,7 +661,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -697,7 +697,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -733,7 +733,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
@@ -769,7 +769,7 @@ export const devices = [
 			{ name: "DIAGNOSTIC", price: 40 },
 
 			{
-				name: "CLEANING (INCLUDE CHARGING PORT, SPEAKERS AND EARPICE)",
+				name: "CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)",
 				price: 40,
 			},
 
