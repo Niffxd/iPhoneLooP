@@ -2,7 +2,7 @@ import { devices } from '@/components/Device/devices.js';
 import CardDevice from '../CardDevice'; // eslint-disable-line
 import style from './SelectDevice.module.css';
 
-export default function SelectDevice () {
+export default function SelectDevice() {
   return (
     <div className={style.select_device_container}>
       <h1>Select your iPhone Model</h1>

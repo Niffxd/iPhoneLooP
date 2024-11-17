@@ -21,8 +21,8 @@ export default function Delivery() {
   return (
     <div style={{ padding: 20 }}>
       <h2>Select your service</h2>
-      <DeliveryCard option={"mailInService"} />
       <DeliveryCard option={"walkInService"} />
+      <DeliveryCard option={"mailInService"} />
       <FAQs />
     </div>
   )
