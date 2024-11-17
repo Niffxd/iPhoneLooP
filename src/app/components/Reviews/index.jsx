@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import ExpandCircleDownRoundedIcon from '@mui/icons-material/ExpandCircleDownRounded';
+import Icon from '@mui/material/Icon';
 import { fetchData } from './reviews';
 import CardReview from './CardReview';
 import CardOwner from './CardOwner.jsx';
@@ -11,7 +13,7 @@ import style from './Reviews.module.css';
 export default function Reviews() {
   const [data, setData] = useState([]);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -47,8 +49,19 @@ export default function Reviews() {
                   text={originalText.text}
                 />
               </div>
-          )
-          }
+          )}
+        </div>
+        <div className={style.controls}>
+          <button className="embla__prev" onClick={scrollPrev}>
+            <Icon sx={{ transform: 'rotate(90deg) scale(1.5)', color: 'var(--color-logo-1)' }}>
+              <ExpandCircleDownRoundedIcon />
+            </Icon>
+          </button>
+          <button className="embla__next" onClick={scrollNext}>
+            <Icon sx={{ transform: 'rotate(270deg) scale(1.5)', color: 'var(--color-logo-1)' }}>
+              <ExpandCircleDownRoundedIcon />
+            </Icon>
+          </button>
         </div>
       </div>
     </section>

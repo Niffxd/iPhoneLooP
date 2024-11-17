@@ -9,6 +9,7 @@ export default function CardOwner() {
     uri: "https://maps.app.goo.gl/Le6FpVC1UneCeR7A7",
     photoUri: "https://lh5.googleusercontent.com/p/AF1QipMtosBg8Hvrdh-BqlcmA-7rgo6veT_GNSNOsyWo=w90-h90-p-k-no-rp-br100",
     rating: 5,
+    location: "32 Elizabeth St, North Perth WA 6006"
   }
 
   return (
@@ -20,11 +21,12 @@ export default function CardOwner() {
             <h3>{author.displayName}</h3>
           </div>
         </div>
-        <div className={style.user_review_container}>
+        <div className={style.owner_review_container}>
           <dir className={style.user_owner_score_and_date}>
             <p>{author.rating}.0</p>
             <span className={style.score_review}></span>
           </dir>
+            <h4>{author.location}</h4>
         </div>
       </article>
     </Link>

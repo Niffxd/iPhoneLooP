@@ -73,7 +73,7 @@ export default function Device() {
           <hr />
           <div className={style.total}>
             <span><b>Total</b></span>
-            <span><b>AUD {currentPrice}</b></span>
+            <span><b>AUD {currentPrice}.00</b></span>
           </div>
           <button type='submit' className={style.submit_button}>
             Choose your repair service

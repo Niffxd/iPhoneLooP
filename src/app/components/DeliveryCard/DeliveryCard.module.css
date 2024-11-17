@@ -41,6 +41,7 @@
 }
 
 .modal_content {
+  min-width: 440px;
   padding: 0 !important;
   padding-bottom: 20px !important;
 }

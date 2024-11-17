@@ -20,7 +20,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 32px;
-	padding: 24px 0 30px;
+	padding: 24px 0 0;
 	background-color: var(--color-main-opacity30);
 }
 
@@ -64,10 +64,15 @@
 	color: gray;
 }
 
-.user_review_container {
+.user_review_container,
+.owner_review_container {
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
+}
+
+.owner_review_container {
+	text-align: center;
 }
 
 .user_review_score_and_date,
@@ -84,6 +89,7 @@
 	font-weight: bolder;
 	color: #fbbc04;
 	padding: 0;
+	justify-content: center;
 }
 
 .score_review {
@@ -113,4 +119,23 @@
 	height: fit-content;
 	flex: 0 0 280px;
 	justify-items: center;
+}
+
+.controls {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 240px;
+	padding: 0 40px;
+	top: -200px;
+	left: 0;
+}
+
+.controls > button {
+	width: 32px;
+	height: 32px;
+	background: var(--color-logo-2);
+	border-radius: 100%;
 }
