@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
@@ -8,6 +9,11 @@ import style from './DeliveryCard.module.css';
 
 export default function DeliveryCard({ option }) {
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
+  const pathname = usePathname();
+
+  console.log(pathname);
 
   const dataOptions = {
     mailInService: {
@@ -54,7 +60,7 @@ export default function DeliveryCard({ option }) {
       </ul>
       <div className={style.buttons_container}>
         <button onClick={() => setOpen(true)}>LEARN MORE</button>
-        <button>BOOK NOW</button>
+        <button onClick={() => router.push(`${pathname}/confirm-booking`)}>BOOK NOW</button>
       </div>
       <Dialog
         open={open}

@@ -1,14 +1,27 @@
 'use client'
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState, useEffect, useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+import ExpandCircleDownRoundedIcon from '@mui/icons-material/ExpandCircleDownRounded';
+import Icon from '@mui/material/Icon';
 import { fetchData } from './reviews';
-import Loading from '../Loader';
+import CardReview from './CardReview';
+import CardOwner from './CardOwner.jsx';
 import style from './Reviews.module.css';
 
-export default function Reviews () {
+export default function Reviews() {
   const [data, setData] = useState([]);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   useEffect(() => {
     fetchData(setData, 0); // < 0 -> to test loading, 0 -> to receive from database, > 1 -> attempts to try to receive data from API
@@ -17,37 +30,40 @@ export default function Reviews () {
   return (
     <section className={style.reviews_container}>
       <h2>What people says about me</h2>
-      {
-        !data?.length || !data
-          ? <Loading />
-          : data.map(
+      <CardOwner />
+      <div className={style.embla} ref={emblaRef}>
+        <div className={style.embla__container}>
+          {data?.map(
             ({
               authorAttribution,
               relativePublishTimeDescription,
               originalText
-            }) => {
-              return (
-                <Link href={authorAttribution.uri} key={authorAttribution.uri} target='_blank'>
-                  <article className={style.card_review_container}>
-                    <div className={style.user_profile}>
-                      <Image src={authorAttribution.photoUri} alt='profile-photo' width={48} height={48} loading='lazy'/>
-                      <div className={style.user_profile_data}>
-                        <h4>{authorAttribution.displayName}</h4>
-                      </div>
-                    </div>
-                    <div className={style.user_review_container}>
-                      <dir className={style.user_review_score_and_date}>
-                        <span className={style.score_review}></span>
-                        <span className={style.date_review}>{relativePublishTimeDescription}</span>
-                      </dir>
-                      <p className={style.user_review_content}>{originalText.text.length > 240 ? originalText.text.slice(0, 240) + '...' : originalText.text}</p>
-                    </div>
-                  </article>
-                </Link>
-              );
-            }
-          )
-      }
+            }) =>
+              <div
+                key={authorAttribution.uri}
+                className={style.embla__slide}
+              >
+                <CardReview
+                  author={authorAttribution}
+                  date={relativePublishTimeDescription}
+                  text={originalText.text}
+                />
+              </div>
+          )}
+        </div>
+        <div className={style.controls}>
+          <button className="embla__prev" onClick={scrollPrev}>
+            <Icon sx={{ transform: 'rotate(90deg) scale(1.5)', color: 'var(--color-logo-1)' }}>
+              <ExpandCircleDownRoundedIcon />
+            </Icon>
+          </button>
+          <button className="embla__next" onClick={scrollNext}>
+            <Icon sx={{ transform: 'rotate(270deg) scale(1.5)', color: 'var(--color-logo-1)' }}>
+              <ExpandCircleDownRoundedIcon />
+            </Icon>
+          </button>
+        </div>
+      </div>
     </section>
   );
 }
