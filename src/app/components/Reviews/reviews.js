@@ -3,15 +3,13 @@ import db from '../../assets/json/db_test.json'; // In case of error loading jso
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 const placeID = process.env.NEXT_PUBLIC_PLACE_ID;
 const language = 'en';
-const fields = [
-  'reviews'
-].join(',');
+const fields = ['reviews'].join(',');
 
 let reviewsCache; // This variable avoids to refetch data from server
 
 const link = `https://places.googleapis.com/v1/places/${placeID}?fields=${fields}&languageCode=${language}&key=${apiKey}`;
 
-const obtainReviews = async attempts => {
+const obtainReviews = async (attempts) => {
   if (!attempts) {
     const { reviews } = db;
 
@@ -34,15 +32,14 @@ const obtainReviews = async attempts => {
         } else {
           return reviews;
         }
-      }
-      catch (e) {
+      } catch (e) {
         console.error(e);
       }
     } else return reviewsCache;
   }
 };
 
-export async function fetchData (setData, attempts) {
+export async function fetchData(setData, attempts) {
   if (attempts < 0) {
     return [];
   } else {

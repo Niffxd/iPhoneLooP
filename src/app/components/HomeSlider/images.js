@@ -5,14 +5,14 @@ import image3 from '../../assets/images/wallpapers/image3.jpg';
 export const list = [
   {
     id: 1,
-    imgPath: image1
+    imgPath: image1,
   },
   {
     id: 2,
-    imgPath: image2
+    imgPath: image2,
   },
   {
     id: 3,
-    imgPath: image3
-  }
+    imgPath: image3,
+  },
 ];

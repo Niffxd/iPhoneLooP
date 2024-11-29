@@ -14,38 +14,38 @@ export const backIcon = backArrowIcon;
 export const icons = [
   {
     icon: screen,
-    text: 'Screens'
+    text: 'Screens',
   },
   {
     icon: battery,
-    text: 'Battery'
+    text: 'Battery',
   },
   {
     icon: camera,
-    text: 'Camera'
+    text: 'Camera',
   },
   {
     icon: backGlass,
-    text: 'Back glass'
+    text: 'Back glass',
   },
   {
     icon: faceID,
-    text: 'Face ID'
+    text: 'Face ID',
   },
   {
     icon: sound,
-    text: 'Sound issues'
+    text: 'Sound issues',
   },
   {
     icon: board,
-    text: 'Motherboard'
+    text: 'Motherboard',
   },
   {
     icon: dataRecovery,
-    text: 'Data recovery'
+    text: 'Data recovery',
   },
   {
     icon: more,
-    text: 'And much more!'
+    text: 'And much more!',
   },
 ];

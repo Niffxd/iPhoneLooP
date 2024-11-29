@@ -7,13 +7,15 @@ export default function SelectDevice() {
     <div className={style.select_device_container}>
       <h1>Select your iPhone Model</h1>
       <div className={style.devices_container}>
-        {
-          devices.map((device, index) => {
-            return (
-              <CardDevice key={index} image={device.image} deviceName={device.name} />
-            );
-          })
-        }
+        {devices.map((device, index) => {
+          return (
+            <CardDevice
+              key={index}
+              image={device.image}
+              deviceName={device.name}
+            />
+          );
+        })}
       </div>
     </div>
   );

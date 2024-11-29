@@ -56,14 +56,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0.69) 71.88%, rgba(0, 0, 0, 0.69) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.41) 0%,
+    rgba(0, 0, 0, 0.69) 71.88%,
+    rgba(0, 0, 0, 0.69) 100%
+  );
   color: var(--color-secondary);
   padding: 0 2.05rem;
   text-align: center;
   z-index: 2;
 }
 
-.text_description  > h1 {
+.text_description > h1 {
   font-size: 1.5em;
 }
 

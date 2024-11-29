@@ -3,34 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "server": "cd ./src/api && npm run dev",
     "dev": "next dev --turbopack",
+    "complete": "concurrently --kill-others-on-fail \"npm run server\" \"npm run dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@fullcalendar/core": "^6.1.15",
-    "@fullcalendar/daygrid": "^6.1.15",
-    "@fullcalendar/interaction": "^6.1.15",
-    "@fullcalendar/react": "^6.1.15",
     "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
-    "embla-carousel-autoplay": "^8.3.1",
-    "embla-carousel-react": "^8.3.1",
-    "next": "15.0.1",
+    "axios": "^1.7.7",
+    "concurrently": "^9.1.0",
+    "embla-carousel-autoplay": "^8.4.0",
+    "embla-carousel-react": "^8.4.0",
+    "next": "15.0.3",
     "next-phone-loop": "file:",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.9.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "eslint": "^9.13.0",
-    "eslint-config-next": "15.0.1",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "15.0.3",
+    "http-server": "^14.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.4.1",
     "typescript": "^5.6.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
