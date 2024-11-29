@@ -42,7 +42,7 @@
   align-items: flex-end;
   border: 0;
   background: transparent;
-  gap: .5rem;
+  gap: 0.5rem;
   cursor: pointer;
 }
 
@@ -51,7 +51,7 @@
   height: 3px;
   background-color: var(--color-white);
   border-radius: 1rem;
-  transition: all .2s;
+  transition: all 0.2s;
   transform-origin: right;
 }
 
@@ -62,11 +62,11 @@
 .menu_links {
   display: none;
   list-style: none;
-  animation: .5s opacity;
+  animation: 0.5s opacity;
 }
 
 .show-menu > span:first-child {
-  transform: rotate(-44deg)
+  transform: rotate(-44deg);
 }
 
 .show-menu > span:nth-child(2) {
@@ -74,7 +74,7 @@
 }
 
 .show-menu > span:last-child {
-  transform: rotate(44deg)
+  transform: rotate(44deg);
 }
 
 .show-menu-links {
@@ -87,7 +87,7 @@
   top: 74px;
   left: 0;
   background-color: var(--color-white);
-  animation: .5s opacity;
+  animation: 0.5s opacity;
   list-style-type: none;
   z-index: 3;
 }
@@ -97,7 +97,7 @@
   padding: 24px;
   color: var(--color-black);
   font-weight: lighter;
-  animation: .5s opacity;
+  animation: 0.5s opacity;
   cursor: pointer;
 }
 

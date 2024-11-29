@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
@@ -31,8 +31,8 @@ export default function DeliveryCard({ option }) {
           '32 Elizabeth Street.',
           'North Perth. 6006',
           '0466618127',
-        ]
-      }
+        ],
+      },
     },
     walkInService: {
       title: 'Walk-In Service',
@@ -46,40 +46,37 @@ export default function DeliveryCard({ option }) {
         image: '/walk-in-service.jpg',
         description: [
           'For clients based in Perth who wish to visit us, we are working with appointments to avoid waiting times. Simply book your repair via our website booking page or Whatsapp to confirm your appointment time before heading to us.',
-        ]
-      }
-    }
-  }
+        ],
+      },
+    },
+  };
 
   return (
     <div className={style.delivery_card_container}>
       <h3>{dataOptions[option].title}</h3>
       <hr className={style.divider} />
       <ul className={style.ul}>
-        {dataOptions[option].description.map((item, index) => <li key={index}>{item}</li>)}
+        {dataOptions[option].description.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
       </ul>
       <div className={style.buttons_container}>
         <button onClick={() => setOpen(true)}>LEARN MORE</button>
-        <button onClick={() => router.push(`${pathname}/confirm-booking`)}>BOOK NOW</button>
+        <button onClick={() => router.push(`${pathname}/confirm-booking`)}>
+          BOOK NOW
+        </button>
       </div>
-      <Dialog
-        open={open}
-        onClose={() => setOpen(false)}
-      >
+      <Dialog open={open} onClose={() => setOpen(false)}>
         <DialogContent className={style.modal_content}>
           <div
             className={style.modal_image}
-            style={{ background: `url(${dataOptions[option].dialog.image})` }}>
-          </div>
+            style={{ background: `url(${dataOptions[option].dialog.image})` }}
+          ></div>
           {dataOptions[option].dialog.description.map((item, index) => {
-            return (
-              <DialogContentText key={index}>
-                {item}
-              </DialogContentText>
-            )
+            return <DialogContentText key={index}>{item}</DialogContentText>;
           })}
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }

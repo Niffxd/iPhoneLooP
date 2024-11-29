@@ -13,46 +13,46 @@ import image11 from '@/assets/images/slider/slider-11.jpg';
 export const list = [
   {
     id: 1,
-    imgPath: image1
+    imgPath: image1,
   },
   {
     id: 2,
-    imgPath: image2
+    imgPath: image2,
   },
   {
     id: 3,
-    imgPath: image3
+    imgPath: image3,
   },
   {
     id: 4,
-    imgPath: image4
+    imgPath: image4,
   },
   {
     id: 5,
-    imgPath: image5
+    imgPath: image5,
   },
   {
     id: 6,
-    imgPath: image6
+    imgPath: image6,
   },
   {
     id: 7,
-    imgPath: image7
+    imgPath: image7,
   },
   {
     id: 8,
-    imgPath: image8
+    imgPath: image8,
   },
   {
     id: 9,
-    imgPath: image9
+    imgPath: image9,
   },
   {
     id: 10,
-    imgPath: image10
+    imgPath: image10,
   },
   {
     id: 11,
-    imgPath: image11
-  }
+    imgPath: image11,
+  },
 ];

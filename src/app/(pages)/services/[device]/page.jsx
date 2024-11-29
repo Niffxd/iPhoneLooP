@@ -5,7 +5,6 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FAQs from '@/components/FAQs';
 
 export default function DeviceContainer() {
-
   return (
     <>
       <NavigationContainer>

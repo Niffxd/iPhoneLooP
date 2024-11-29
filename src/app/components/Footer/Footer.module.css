@@ -26,9 +26,9 @@
 .contact_container {
   display: grid;
   grid-template-areas:
-    "whatsapp whatsapp whatsapp"
-    "location location location"
-    "facebook instagram mail";
+    'whatsapp whatsapp whatsapp'
+    'location location location'
+    'facebook instagram mail';
   gap: 0 1rem;
 
   align-items: center;

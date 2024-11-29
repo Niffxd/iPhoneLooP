@@ -1,0 +1,11 @@
+{
+  "web": {
+    "client_id": "55682438434-dkqmbuvsrb970ahd9qkj1gnp05332uf1.apps.googleusercontent.com",
+    "project_id": "phoneloop-418003",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "javascript_origins": ["http://localhost:3000"]
+  }
+}
