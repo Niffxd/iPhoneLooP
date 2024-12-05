@@ -217,33 +217,21 @@ export const devices = [
     image: image6,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 460 },
-
       { name: 'SOFT OLED SCREEN', price: 320 },
-
       { name: 'LCD SCREEN', price: 220 },
-
       { name: 'BATTERY', price: 140 },
-
       { name: 'BACK GLASS', price: 150 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 150 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 140 },
-
       { name: 'MICROPHONE', price: 150 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 230 },
-
       { name: 'MOTHERBOARD REPAIR', price: 340 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 130 },
-
       { name: 'REAR CAMERA LENS', price: 70 },
     ],
   },
@@ -274,32 +262,20 @@ export const devices = [
     image: image7,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED', price: 340 },
-
       { name: 'AFTERMARKET LCD SCREEN', price: 170 },
-
       { name: 'BATTERY', price: 125 },
-
       { name: 'BACK GLASS', price: 140 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 150 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 120 },
-
       { name: 'MICROPHONE', price: 140 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 130 },
-
       { name: 'MOTHERBOARD REPAIR', price: 280 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 120 },
-
       { name: 'REAR CAMERA LENS', price: 60 },
     ],
   },
@@ -374,36 +350,22 @@ export const devices = [
     image: image8,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 280 },
-
       { name: 'AFTERMARKET LCD SCREEN', price: 150 },
-
       { name: 'AFTERMARKET OLED SCREEN', price: 200 },
-
       { name: 'BATTERY', price: 115 },
-
       { name: 'BACK GLASS', price: 150 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 120 },
-
       { name: 'FACE ID', price: 170 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 120 },
-
       { name: 'MICROPHONE', price: 120 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 220 },
-
       { name: 'MOTHERBOARD REPAIR', price: 240 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 120 },
-
       { name: 'REAR CAMERA LENS', price: 55 },
     ],
   },
@@ -412,36 +374,22 @@ export const devices = [
     image: image9,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 280 },
-
       { name: 'AFTERMARKET LCD SCREEN', price: 150 },
-
       { name: 'AFTERMARKET OLED SCREEN', price: 200 },
-
       { name: 'BATTERY', price: 115 },
-
       { name: 'BACK GLASS', price: 140 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 120 },
-
       { name: 'FACE ID', price: 170 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 120 },
-
       { name: 'MICROPHONE', price: 120 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 140 },
-
       { name: 'MOTHERBOARD REPAIR', price: 240 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 120 },
-
       { name: 'REAR CAMERA LENS', price: 55 },
     ],
   },
@@ -551,34 +499,21 @@ export const devices = [
     image: image11,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 230 },
-
       { name: 'AFTERMARKET SCREEN', price: 115 },
-
       { name: 'BATTERY', price: 110 },
-
       { name: 'BACK GLASS', price: 110 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 150 },
-
       { name: 'FACE ID', price: 160 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 90 },
-
       { name: 'MICROPHONE', price: 140 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 160 },
-
       { name: 'MOTHERBOARD REPAIR', price: 200 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 100 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -587,34 +522,21 @@ export const devices = [
     image: image12,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 220 },
-
       { name: 'AFTERMARKET SCREEN', price: 110 },
-
       { name: 'BATTERY', price: 110 },
-
       { name: 'BACK GLASS', price: 110 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 140 },
-
       { name: 'FACE ID', price: 160 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 90 },
-
       { name: 'MICROPHONE', price: 140 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 160 },
-
       { name: 'MOTHERBOARD REPAIR', price: 200 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 100 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -623,34 +545,21 @@ export const devices = [
     image: image13,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 170 },
-
       { name: 'AFTERMARKET SCREEN', price: 110 },
-
       { name: 'BATTERY', price: 110 },
-
       { name: 'BACK GLASS', price: 110 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 95 },
-
       { name: 'FACE ID', price: 160 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 90 },
-
       { name: 'MICROPHONE', price: 95 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 120 },
-
       { name: 'MOTHERBOARD REPAIR', price: 200 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 95 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -659,34 +568,21 @@ export const devices = [
     image: image14,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 220 },
-
       { name: 'AFTERMARKET SCREEN', price: 110 },
-
       { name: 'BATTERY', price: 100 },
-
       { name: 'BACK GLASS', price: 100 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 95 },
-
       { name: 'FACE ID', price: 140 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 80 },
-
       { name: 'MICROPHONE', price: 95 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 120 },
-
       { name: 'MOTHERBOARD REPAIR', price: 180 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 90 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -695,34 +591,21 @@ export const devices = [
     image: image14,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 170 },
-
       { name: 'AFTERMARKET SCREEN', price: 95 },
-
       { name: 'BATTERY', price: 95 },
-
       { name: 'BACK GLASS', price: 100 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 90 },
-
       { name: 'FACE ID', price: 130 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 80 },
-
       { name: 'MICROPHONE', price: 90 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 110 },
-
       { name: 'MOTHERBOARD REPAIR', price: 170 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 80 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -731,34 +614,21 @@ export const devices = [
     image: image15,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 160 },
-
       { name: 'AFTERMARKET SCREEN', price: 95 },
-
       { name: 'BATTERY', price: 95 },
-
       { name: 'BACK GLASS', price: 100 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 90 },
-
       { name: 'FACE ID', price: 130 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 80 },
-
       { name: 'MICROPHONE', price: 90 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 110 },
-
       { name: 'MOTHERBOARD REPAIR', price: 170 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 80 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -767,34 +637,21 @@ export const devices = [
     image: image16,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       {
         name: 'CLEANING (INCLUDE CHARGING PORT - SPEAKERS - EARPICE)',
         price: 40,
       },
-
       { name: 'GENUINE OLED SCREEN (PULLED OR REFURBISHED)', price: 170 },
-
       { name: 'AFTERMARKET SCREEN', price: 95 },
-
       { name: 'BATTERY', price: 95 },
-
       { name: 'BACK GLASS', price: 100 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 90 },
-
       { name: 'FACE ID', price: 130 },
-
       { name: 'EARPIECE / SPEAKER (GENUINE)', price: 80 },
-
       { name: 'MICROPHONE', price: 90 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 100 },
-
       { name: 'MOTHERBOARD REPAIR', price: 170 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 80 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
@@ -803,27 +660,16 @@ export const devices = [
     image: image17,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       { name: 'ORIGINAL LCD SCREEN', price: 125 },
-
       { name: 'AFTERMARKET SCREEN', price: 80 },
-
       { name: 'BATTERY', price: 65 },
-
       { name: 'BACK GLASS', price: 100 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 75 },
-
       { name: 'EARPIECE', price: 60 },
-
       { name: 'MICROPHONE', price: 75 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 110 },
-
       { name: 'MOTHERBOARD REPAIR', price: 130 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 75 },
-
       { name: 'REAR CAMERA LENS', price: 45 },
     ],
   },
@@ -832,25 +678,15 @@ export const devices = [
     image: image18,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       { name: 'ORIGINAL LCD SCREEN', price: 110 },
-
       { name: 'AFTERMARKET SCREEN', price: 70 },
-
       { name: 'BATTERY', price: 65 },
-
       { name: 'BACK GLASS', price: 100 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 65 },
-
       { name: 'EARPIECE', price: 60 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 90 },
-
       { name: 'MOTHERBOARD REPAIR', price: 130 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 65 },
-
       { name: 'REAR CAMERA LENS', price: 45 },
     ],
   },
@@ -859,23 +695,14 @@ export const devices = [
     image: image19,
     prices: [
       { name: 'DIAGNOSTIC', price: 40 },
-
       { name: 'ORIGINAL LCD SCREEN', price: 100 },
-
       { name: 'AFTERMARKET SCREEN', price: 70 },
-
       { name: 'BATTERY', price: 65 },
-
       { name: 'CHARGING PORT (GENUINE)', price: 60 },
-
       { name: 'EARPIECE', price: 60 },
-
       { name: 'REAR CAMERA (GENUINE)', price: 100 },
-
       { name: 'MOTHERBOARD REPAIR', price: 140 },
-
       { name: 'FRONT CAMERA (GENUINE)', price: 65 },
-
       { name: 'REAR CAMERA LENS', price: 50 },
     ],
   },
