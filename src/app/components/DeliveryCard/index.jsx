@@ -9,11 +9,10 @@ import style from './DeliveryCard.module.css';
 
 export default function DeliveryCard({ option }) {
   const [open, setOpen] = useState(false);
+  const deliveryMethod = window.sessionStorage;
 
   const router = useRouter();
   const pathname = usePathname();
-
-  console.log(pathname);
 
   const dataOptions = {
     mailInService: {
@@ -51,6 +50,11 @@ export default function DeliveryCard({ option }) {
     },
   };
 
+  const handlerChooseService = () => {
+    deliveryMethod.setItem('delivery', option);
+    router.push(`${pathname}/confirm-booking`);
+  };
+
   return (
     <div className={style.delivery_card_container}>
       <h3>{dataOptions[option].title}</h3>
@@ -62,9 +66,7 @@ export default function DeliveryCard({ option }) {
       </ul>
       <div className={style.buttons_container}>
         <button onClick={() => setOpen(true)}>LEARN MORE</button>
-        <button onClick={() => router.push(`${pathname}/confirm-booking`)}>
-          BOOK NOW
-        </button>
+        <button onClick={handlerChooseService}>BOOK NOW</button>
       </div>
       <Dialog open={open} onClose={() => setOpen(false)}>
         <DialogContent className={style.modal_content}>

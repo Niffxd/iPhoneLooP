@@ -2,8 +2,13 @@
   padding: 24px;
 }
 
+.confirm_booking_container > h2 {
+  margin-bottom: 24px;
+}
+
 .confirm_booking_container > h4 {
   margin-left: 10px;
+  margin-bottom: 24px;
 }
 
 .ul {
@@ -81,12 +86,36 @@
   padding: 10px;
 }
 
+.form_confirm_booking {
+  padding: 24px 10px;
+}
+
 .section_container h4 {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .form_confirm_booking input {
   height: 40px;
   font-size: 16px;
   padding-left: 10px;
+}
+
+.submit_button {
+  width: 100%;
+  border: 1px solid var(--color-black);
+  background: var(--color-logo-2);
+  color: var(--color-logo-1);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: medium;
+  text-align: center;
+}
+
+.warning {
+  color: tomato;
+  font-size: small;
+  padding: 0 10px;
 }
