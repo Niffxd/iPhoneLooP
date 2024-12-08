@@ -93,9 +93,6 @@
 }
 
 .score_review {
-  display: block;
-  width: calc(calc(15px + 3px) * 5 + calc(15px / 2) * 0);
-  height: 15px;
   background-image: url('../../assets/images/icons/star.svg');
 }
 
