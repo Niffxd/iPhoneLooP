@@ -1,12 +1,12 @@
+export const dynamic = 'force-static';
+
 import { fetchDataAndSaveToFile } from './reviews';
-import reviews from './json/reviews.json';
 
 export async function GET(request: Request) {
   try {
-    fetchDataAndSaveToFile();
-    const dataLocal: any = reviews;
+    const data = await fetchDataAndSaveToFile();
 
-    return Response.json(dataLocal);
+    return Response.json(data);
   } catch (err) {
     console.error('Some error fetching reviews from server', err);
   }

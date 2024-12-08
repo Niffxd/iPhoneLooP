@@ -30,7 +30,16 @@ export default function CardOwner() {
         <div className={style.owner_review_container}>
           <dir className={style.user_owner_score_and_date}>
             <p>{author.rating}.0</p>
-            <span className={style.score_review}></span>
+            <span
+              className={style.score_review}
+              style={{
+                position: 'relative',
+                top: '-2px',
+                display: 'block',
+                width: 'calc(calc(15px + 3px) * 1)',
+                height: '15px',
+              }}
+            />
           </dir>
           <h4>{author.location}</h4>
         </div>

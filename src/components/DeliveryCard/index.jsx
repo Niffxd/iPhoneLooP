@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
@@ -12,7 +12,6 @@ export default function DeliveryCard({ option }) {
   const deliveryMethod = window.sessionStorage;
 
   const router = useRouter();
-  const pathname = usePathname();
 
   const dataOptions = {
     mailInService: {
@@ -52,7 +51,7 @@ export default function DeliveryCard({ option }) {
 
   const handlerChooseService = () => {
     deliveryMethod.setItem('delivery', option);
-    router.push(`${pathname}/confirm-booking`);
+    router.push('/delivery/confirm-booking');
   };
 
   return (

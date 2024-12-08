@@ -25,7 +25,7 @@ export default function CardReview({ details }) {
               className={style.score_review}
               style={{
                 display: 'block',
-                width: `calc(calc(15px + 3px) * ${details.score} + calc(15px / 2) * 0)`,
+                width: `calc(calc(15px + 3px) * ${details.score})`,
                 height: '15px',
               }}
             />

@@ -1,5 +1,12 @@
+import { devices } from '@/components/Device/devices.js';
 import DeliveryCard from '@/components/DeliveryCard';
 import FAQs from '@/components/FAQs';
+
+export async function generateStaticParams() {
+  return devices.map((device) => ({
+    device: device.name.replaceAll(' ', '%20'),
+  }));
+}
 
 export default function Delivery() {
   return (

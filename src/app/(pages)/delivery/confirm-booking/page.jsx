@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import moment from 'moment';
 import FAQs from '@/components/FAQs';
 import style from './ConfirmBooking.module.css';
@@ -10,15 +10,13 @@ export default function ConfirmBooking() {
   const today = new Date(Date.now()).toISOString().substring(0, 10);
   const service = window.sessionStorage;
 
-  const { device } = useParams();
   const router = useRouter();
 
   const [selectedDate, setSelectedDate] = useState(today);
   const [validDate, setValidDate] = useState(true);
-  const [selectedTime, setSelectedTime] = useState('');
 
   const serviceChosen = service.getItem('delivery');
-  const currentDevice = device.replaceAll('%20', ' ');
+  const currentDevice = service.getItem('device');
   const services = service.getItem('list')?.split(',');
   const price = service.getItem('price');
 
@@ -70,14 +68,13 @@ export default function ConfirmBooking() {
   };
 
   const handlerUpdateDate = (e, inputType) => {
-    if (inputType === 'date') setSelectedDate(e.target.value);
-    if (inputType === 'time') setSelectedTime(e.target.value);
     handleValidationInput(e.target.value, inputType);
   };
 
   useEffect(() => {
     if (
       !window?.sessionStorage ||
+      window?.sessionStorage.getItem('device') === null ||
       window?.sessionStorage.getItem('list') === null ||
       window?.sessionStorage.getItem('price') === null ||
       window?.sessionStorage.getItem('delivery') === null
@@ -176,9 +173,7 @@ export default function ConfirmBooking() {
                               <select
                                 name={`${inputType[0]}-name`}
                                 id={`${inputType[0]}-id`}
-                              >
-                                {/* //TODO: Recuperar horarios libres para mostrar en listado */}
-                              </select>
+                              ></select>
                               {!validDate && (
                                 <p className={style.warning}>
                                   The current date is a weekend or holiday.
