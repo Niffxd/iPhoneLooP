@@ -7,7 +7,7 @@ import FAQs from '@/components/FAQs';
 
 export async function generateStaticParams() {
   return devices.map((device) => ({
-    device: device.name.replaceAll(' ', '%20'),
+    device: device.name.replaceAll(' ', '-'),
   }));
 }
 

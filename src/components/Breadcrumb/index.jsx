@@ -8,7 +8,7 @@ export default function Breadcrumb() {
   const pathname = usePathname();
   const currentLocation = pathname
     .substring(1)
-    .replaceAll('%20', ' ')
+    .replaceAll('-', ' ')
     .split('/')
     .slice(0, -1);
 

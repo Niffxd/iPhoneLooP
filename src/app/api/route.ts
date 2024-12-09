@@ -2,7 +2,7 @@ export const dynamic = 'force-static';
 
 import { fetchDataAndSaveToFile } from './reviews';
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const data = await fetchDataAndSaveToFile();
 

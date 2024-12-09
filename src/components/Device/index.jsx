@@ -18,7 +18,7 @@ export default function Device() {
 
   const serviceStore = useServiceStore();
 
-  const currentDeviceName = device.replaceAll('%20', ' ');
+  const currentDeviceName = device.replaceAll('-', ' ');
   const currentDevice = devices.find(
     (device) => device.name === currentDeviceName,
   );

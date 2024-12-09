@@ -17,6 +17,8 @@
     "@google-cloud/local-auth": "^3.0.1",
     "@mui/icons-material": "^6.1.10",
     "@mui/material": "^6.1.10",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
     "concurrently": "^9.1.0",
     "embla-carousel-autoplay": "^8.5.1",
     "embla-carousel-react": "^8.5.1",

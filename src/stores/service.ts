@@ -1,10 +1,10 @@
 import { create } from 'zustand';
 
 type service = {
-  device: string;
-  listOfRepairments: [];
-  price: number;
-  delivery: string;
+  device: string | null;
+  listOfRepairments: [] | null;
+  price: number | null;
+  delivery: string | null;
   setDevice: (name: string) => void;
   setListOfRepairments: (list: string) => void;
   setPrice: (price: number) => void;
@@ -14,10 +14,10 @@ type service = {
 export const useServiceStore = create(
   (set) =>
     ({
-      device: '',
-      listOfRepairments: [],
-      price: 0,
-      delivery: '',
+      device: null,
+      listOfRepairments: null,
+      price: null,
+      delivery: null,
       setDevice: (name) => set(() => ({ device: name })),
       setListOfRepairments: (list) => set(() => ({ listOfRepairments: list })),
       setPrice: (price) => set(() => ({ price: price })),

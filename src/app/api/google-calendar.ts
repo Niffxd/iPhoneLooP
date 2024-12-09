@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const { google } = require('googleapis');
 const { GoogleAuth } = require('google-auth-library');
 
