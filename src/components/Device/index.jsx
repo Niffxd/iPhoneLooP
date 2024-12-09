@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { devices } from './devices.js';
 import { useParams, useRouter } from 'next/navigation';
+import { useServiceStore } from '@/stores/service.ts';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import style from './Device.module.css';
@@ -10,13 +11,14 @@ import style from './Device.module.css';
 export default function Device() {
   const { device } = useParams();
   const router = useRouter();
-  const depot = window.sessionStorage;
 
   const [currentPrice, setCurrentPrice] = useState(0);
   const [listOfRepairs, setListOfRepairs] = useState([]);
   const [open, setOpen] = useState(false);
 
-  const currentDeviceName = device.replaceAll('%20', ' ');
+  const serviceStore = useServiceStore();
+
+  const currentDeviceName = device.replaceAll('-', ' ');
   const currentDevice = devices.find(
     (device) => device.name === currentDeviceName,
   );
@@ -36,9 +38,10 @@ export default function Device() {
     if (!currentPrice) {
       setOpen(true);
     } else {
-      depot.setItem('list', listOfRepairs);
-      depot.setItem('price', currentPrice);
-      router.push(`/services/${currentDeviceName}/delivery`);
+      serviceStore.setDevice(currentDeviceName);
+      serviceStore.setListOfRepairments(listOfRepairs);
+      serviceStore.setPrice(currentPrice);
+      router.push('/delivery');
     }
   };
 

@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useServiceStore } from '@/stores/service';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
@@ -9,10 +10,9 @@ import style from './DeliveryCard.module.css';
 
 export default function DeliveryCard({ option }) {
   const [open, setOpen] = useState(false);
-  const deliveryMethod = window.sessionStorage;
+  const deliveryMethod = useServiceStore();
 
   const router = useRouter();
-  const pathname = usePathname();
 
   const dataOptions = {
     mailInService: {
@@ -51,8 +51,8 @@ export default function DeliveryCard({ option }) {
   };
 
   const handlerChooseService = () => {
-    deliveryMethod.setItem('delivery', option);
-    router.push(`${pathname}/confirm-booking`);
+    deliveryMethod.setDelivery(option);
+    router.push('/delivery/confirm-booking');
   };
 
   return (

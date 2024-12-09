@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import links from '@/assets/json/categories.json';
+import links from '@/app/api/json/categories.json';
 import style from '@/components/Navbar/Navbar.module.css';
 
 export default function MenuNav() {
@@ -56,9 +56,7 @@ export default function MenuNav() {
       <div id="menu-links" className={style.menu_links}>
         <ul>
           {links.map((item) => {
-            return item === 'Home' ||
-              item === 'Services' ||
-              item === 'Calendar' ? (
+            return item === 'Home' || item === 'Services' || item === 'Test' ? (
               <Link
                 className={style.link}
                 key={item}

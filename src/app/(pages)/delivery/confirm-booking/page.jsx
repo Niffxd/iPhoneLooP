@@ -1,26 +1,31 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useServiceStore } from '@/stores/service';
 import moment from 'moment';
 import FAQs from '@/components/FAQs';
 import style from './ConfirmBooking.module.css';
 
 export default function ConfirmBooking() {
   const today = new Date(Date.now()).toISOString().substring(0, 10);
-  const service = window.sessionStorage;
+  const service = useServiceStore();
 
-  const { device } = useParams();
   const router = useRouter();
 
-  const [selectedDate, setSelectedDate] = useState(today);
+  const [selectedDate, setSelectedDate] = useState(today); // eslint-disable-line
   const [validDate, setValidDate] = useState(true);
-  const [selectedTime, setSelectedTime] = useState('');
 
-  const serviceChosen = service.getItem('delivery');
-  const currentDevice = device.replaceAll('%20', ' ');
-  const services = service.getItem('list')?.split(',');
-  const price = service.getItem('price');
+  const serviceChosen = service.delivery;
+  const currentDevice = service.device;
+  const services = service.listOfRepairments;
+  const price = service.price;
+
+  const validateLocation =
+    serviceChosen === null ||
+    currentDevice === null ||
+    services === null ||
+    price === null;
 
   const formInputs = {
     basic: {
@@ -70,40 +75,44 @@ export default function ConfirmBooking() {
   };
 
   const handlerUpdateDate = (e, inputType) => {
-    if (inputType === 'date') setSelectedDate(e.target.value);
-    if (inputType === 'time') setSelectedTime(e.target.value);
     handleValidationInput(e.target.value, inputType);
   };
 
   useEffect(() => {
-    if (
-      !window?.sessionStorage ||
-      window?.sessionStorage.getItem('list') === null ||
-      window?.sessionStorage.getItem('price') === null ||
-      window?.sessionStorage.getItem('delivery') === null
-    )
-      router.push('/');
-  }, []);
+    if (validateLocation) router.push('/');
+  }, []); // eslint-disable-line
 
   return (
     <div className={style.confirm_booking_container}>
       <h2>iPhone {currentDevice} Repair</h2>
       <h4>Selected Repairs:</h4>
       <ul className={style.ul}>
-        {services?.map((service, index) => (
-          <li key={index}>{service}</li>
-        ))}
+        {!validateLocation ? (
+          services?.map((service, index) => <li key={index}>{service}</li>)
+        ) : (
+          <>
+            <li>
+              <i>No services requested.</i>
+            </li>
+            <li>
+              <i>
+                Please go home and select one iPhone model and one repair at
+                least.
+              </i>
+            </li>
+          </>
+        )}
       </ul>
       <form
         onSubmit={handleConfirmBooking}
         className={style.form_confirm_booking}
       >
-        {services &&
+        {!validateLocation &&
           Object.entries(formInputs.basic)?.map((section, index) => {
             return (
               <div key={`${index}-section`} className={style.section_container}>
                 <h4>{section[0]}</h4>
-                {services &&
+                {!validateLocation &&
                   Object.entries(section[1])?.map((input, index) => {
                     return (
                       <label
@@ -122,13 +131,13 @@ export default function ConfirmBooking() {
               </div>
             );
           })}
-        {services &&
+        {!validateLocation &&
           Object.entries(formInputs[serviceChosen])?.map((section, index) => {
             return (
               <div key={`${index}-section`} className={style.section_container}>
                 <h4>{section[0]}</h4>
                 {serviceChosen === 'mailInService'
-                  ? services &&
+                  ? !validateLocation &&
                     Object.entries(section[1]).map((inputType, index) => {
                       return (
                         <label
@@ -176,9 +185,7 @@ export default function ConfirmBooking() {
                               <select
                                 name={`${inputType[0]}-name`}
                                 id={`${inputType[0]}-id`}
-                              >
-                                {/* //TODO: Recuperar horarios libres para mostrar en listado */}
-                              </select>
+                              ></select>
                               {!validDate && (
                                 <p className={style.warning}>
                                   The current date is a weekend or holiday.
