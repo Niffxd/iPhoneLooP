@@ -60,7 +60,7 @@ export async function fetchDataAndSaveToFile() {
         if (err) {
           throw err;
         }
-        console.log('Datos guardados en "reviewsUncleaned.json".');
+        console.assert('uncleaned data saved');
       },
     );
 
@@ -71,7 +71,7 @@ export async function fetchDataAndSaveToFile() {
         if (err) {
           throw err;
         }
-        console.log('Datos guardados en "reviews.json".');
+        console.assert('cleaned data saved');
       },
     );
 

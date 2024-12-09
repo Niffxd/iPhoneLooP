@@ -13,7 +13,7 @@ export default function ConfirmBooking() {
 
   const router = useRouter();
 
-  const [selectedDate, setSelectedDate] = useState(today); // eslint-disable-line
+  const [selectedDate, setSelectedDate] = useState(today);
   const [validDate, setValidDate] = useState(true);
 
   const serviceChosen = service.delivery;
@@ -57,6 +57,7 @@ export default function ConfirmBooking() {
   const handleValidationInput = (value, inputType) => {
     switch (inputType) {
       case 'date':
+        setSelectedDate(value);
         if (moment(value).isoWeekday() === 7) setValidDate(false);
         else setValidDate(true);
         break;
@@ -78,9 +79,25 @@ export default function ConfirmBooking() {
     handleValidationInput(e.target.value, inputType);
   };
 
+  async function getDataFromApi(type) {
+    try {
+      const message = await fetch(
+        `/delivery/confirm-booking/api?${type}=true`,
+      ).then((res) => res.json());
+
+      console.log(message);
+    } catch (e) {
+      console.error('Error getting events', e);
+    }
+  }
+
   useEffect(() => {
     if (validateLocation) router.push('/');
   }, []); // eslint-disable-line
+
+  useEffect(() => {
+    getDataFromApi('events');
+  }, []);
 
   return (
     <div className={style.confirm_booking_container}>
@@ -153,7 +170,7 @@ export default function ConfirmBooking() {
                         </label>
                       );
                     })
-                  : services &&
+                  : !validateLocation &&
                     Object.entries(section[1])?.map((inputType, index) => {
                       return (
                         <label
@@ -185,20 +202,29 @@ export default function ConfirmBooking() {
                               <select
                                 name={`${inputType[0]}-name`}
                                 id={`${inputType[0]}-id`}
-                              ></select>
-                              {!validDate && (
-                                <p className={style.warning}>
-                                  The current date is a weekend or holiday.
-                                  Please change to be able to booking
-                                </p>
-                              )}
+                                disabled={!validDate}
+                              >
+                                {!validDate ? (
+                                  <option value="disabled">
+                                    Not available
+                                  </option>
+                                ) : (
+                                  <>
+                                    <option value="no-option">no option</option>
+                                  </>
+                                )}
+                              </select>
                             </>
                           )}
                           {inputType[1] === 'text' && (
                             <input
+                              style={{
+                                height: '100px',
+                              }}
                               type={`${inputType[1]}`}
                               name={`${inputType[0]}-name`}
                               id={`${inputType[0]}-id`}
+                              placeholder="Hey! Type a note for me"
                             />
                           )}
                         </label>

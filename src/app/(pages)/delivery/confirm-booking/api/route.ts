@@ -1,19 +1,17 @@
 /* eslint-disable */
 
+export const dynamic = 'force-static';
+
 const { google } = require('googleapis');
 const { GoogleAuth } = require('google-auth-library');
+import { NextRequest } from 'next/server';
 
 const calendarId = process.env.NEXT_PUBLIC_CALENDAR_ID;
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
-
-// Ruta al archivo JSON descargado de la cuenta de servicio
 const KEY_FILE_PATH = './src/app/api/credentials.json';
-
-// ID del calendario con el que deseas trabajar (puede ser "primary" o un ID específico)
 const CALENDAR_ID = calendarId;
 
-// Configura la autenticación
 const auth = new GoogleAuth({
   keyFile: KEY_FILE_PATH,
   scopes: SCOPES,
@@ -25,44 +23,44 @@ const calendarApi = google.calendar({ version: 'v3', auth: authClient });
 async function listEvents() {
   const response = await calendarApi.events.list({
     calendarId: CALENDAR_ID,
-    maxResults: 10,
     singleEvents: true,
     orderBy: 'startTime',
   });
 
   const events = response.data.items;
 
-  if (events.length) {
-    console.log('Próximos eventos:');
-    events.forEach((event: any) => {
-      const start = event.start.dateTime || event.start.date;
-      console.log(`${start} - ${event.summary}`);
-    });
-  } else {
-    console.log('No hay próximos eventos.');
-  }
+  // if (events.length) {
+  //   console.log('Próximos eventos:');
+  //   events.forEach((event: any) => {
+  //     const start = event.start.dateTime || event.start.date;
+  //     console.log(`${start} - ${event.summary}`);
+  //   });
+  // } else {
+  //   console.log('No hay próximos eventos.');
+  // }
+
+  return events;
 }
 
 async function createEvent() {
   try {
-    // Detalles del evento
     const event = {
       summary: 'Reunión de equipo',
       location: 'PhoneLooP, 32 Elizabeth St, North Perth WA 6006, Australia',
       description: 'Discutir avances del proyecto',
       start: {
-        dateTime: '2024-12-10T10:00:00-05:00', // Fecha y hora de inicio (formato ISO 8601)
-        timeZone: 'America/New_York', // Zona horaria
+        dateTime: '2024-12-10T10:00:00-05:00',
+        timeZone: 'America/New_York',
       },
       end: {
-        dateTime: '2024-12-10T11:00:00-05:00', // Fecha y hora de fin
+        dateTime: '2024-12-10T11:00:00-05:00',
         timeZone: 'America/New_York',
       },
       reminders: {
         useDefault: false,
         overrides: [
-          { method: 'email', minutes: 24 * 60 }, // Recordatorio por correo 24 horas antes
-          { method: 'popup', minutes: 10 }, // Recordatorio emergente 10 minutos antes
+          { method: 'email', minutes: 24 * 60 },
+          { method: 'popup', minutes: 10 },
         ],
       },
     };
@@ -81,7 +79,11 @@ async function createEvent() {
   }
 }
 
-export async function GET(request: Request) {
-  createEvent();
-  listEvents();
+export async function GET(request: NextRequest) {
+  const url = request.nextUrl;
+
+  // createEvent();
+  const eventsList = await listEvents();
+
+  return Response.json({ events: eventsList });
 }
