@@ -122,7 +122,6 @@ export default function ConfirmBooking() {
 
   const handleConfirmBooking = (e) => {
     e.preventDefault();
-    console.log('Booking');
     postDataToApi();
   };
 
