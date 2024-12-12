@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useServiceStore } from '@/stores/service';
+import { useNotify } from '@/hooks/notify';
+import axios from 'axios';
 import moment from 'moment';
 import FAQs from '@/components/FAQs';
 import style from './ConfirmBooking.module.css';
@@ -10,11 +12,22 @@ import style from './ConfirmBooking.module.css';
 export default function ConfirmBooking() {
   const today = new Date(Date.now()).toISOString().substring(0, 10);
   const service = useServiceStore();
+  const notify = useNotify();
 
   const router = useRouter();
 
   const [selectedDate, setSelectedDate] = useState(today);
   const [validDate, setValidDate] = useState(true);
+  const [selectedTime, setSelectedTime] = useState('');
+  const [selectedMessage, setSelectedMessage] = useState('');
+  const [loadingSchedule, setLoadingSchedule] = useState(true);
+  const [schedule, setSchedule] = useState([]);
+
+  const [fullname, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [passcode, setPasscode] = useState('');
+  const [mobileNumber, setMobileNumber] = useState('');
+  const [alternativeNumber, setAlternativeNumber] = useState('');
 
   const serviceChosen = service.delivery;
   const currentDevice = service.device;
@@ -27,12 +40,23 @@ export default function ConfirmBooking() {
     services === null ||
     price === null;
 
+  const allSchedule = [
+    moment(selectedDate).isoWeekday() === 6 ? '10:00' : '09:30',
+    '10:30',
+    '11:30',
+    '12:30',
+    '13:30',
+    '14:30',
+    '15:30',
+    '16:30',
+  ];
+
   const formInputs = {
     basic: {
       'Customer Info:': {
         'Full Name': 'text',
         Email: 'email',
-        Passcode: 'tel',
+        Passcode: 'number',
         'Mobile Number': 'tel',
         'Alternate Phone Number': 'tel',
       },
@@ -54,7 +78,8 @@ export default function ConfirmBooking() {
     },
   };
 
-  const handleValidationInput = (value, inputType) => {
+  const handleValidationInput = (e, inputType) => {
+    const { value } = e.target;
     switch (inputType) {
       case 'date':
         setSelectedDate(value);
@@ -63,6 +88,31 @@ export default function ConfirmBooking() {
         break;
 
       case 'time':
+        setSelectedTime(value);
+        break;
+
+      case 'text':
+        setSelectedMessage(value);
+        break;
+
+      case 'Full Name':
+        setFullName(value);
+        break;
+
+      case 'Email':
+        setEmail(value);
+        break;
+
+      case 'Passcode':
+        setPasscode(value.substring(0, 6));
+        break;
+
+      case 'Mobile Number':
+        setMobileNumber(value);
+        break;
+
+      case 'Alternate Phone Number':
+        setAlternativeNumber(value);
         break;
 
       default:
@@ -73,21 +123,49 @@ export default function ConfirmBooking() {
   const handleConfirmBooking = (e) => {
     e.preventDefault();
     console.log('Booking');
+    postDataToApi();
   };
 
-  const handlerUpdateDate = (e, inputType) => {
-    handleValidationInput(e.target.value, inputType);
-  };
-
-  async function getDataFromApi(type) {
+  async function getDataFromApi() {
     try {
-      const message = await fetch(
-        `/delivery/confirm-booking/api?${type}=true`,
-      ).then((res) => res.json());
+      const events = await axios
+        .get('/delivery/confirm-booking/api')
+        .then((res) => res.data);
 
-      console.log(message);
+      setSchedule(events);
+      setSelectedTime(
+        allSchedule.filter(
+          (item) => !schedule[selectedDate]?.includes(item),
+        )[0],
+      );
+      setLoadingSchedule(false);
     } catch (e) {
       console.error('Error getting events', e);
+    }
+  }
+
+  async function postDataToApi() {
+    const newAppointment = {
+      fullname,
+      email,
+      passcode: passcode.toString(),
+      mobileNumber,
+      alternativeNumber,
+      selectedDate,
+      selectedTime,
+      message: selectedMessage,
+    };
+
+    try {
+      await axios.post('/delivery/confirm-booking/api', newAppointment);
+      notify.success('Appointment settled ⭐!');
+      setTimeout(() => router.push('/'), 5000);
+    } catch (error) {
+      notify.error('Something went wrong 🫢');
+      console.error(
+        'Error:',
+        error.response ? error.response.data : error.message,
+      );
     }
   }
 
@@ -96,7 +174,7 @@ export default function ConfirmBooking() {
   }, []); // eslint-disable-line
 
   useEffect(() => {
-    getDataFromApi('events');
+    getDataFromApi();
   }, []);
 
   return (
@@ -130,17 +208,44 @@ export default function ConfirmBooking() {
               <div key={`${index}-section`} className={style.section_container}>
                 <h4>{section[0]}</h4>
                 {!validateLocation &&
-                  Object.entries(section[1])?.map((input, index) => {
+                  Object.entries(section[1])?.map((inputType, index) => {
                     return (
                       <label
-                        htmlFor={`${input[0]}-name`}
+                        htmlFor={`${inputType[0]}-name`}
                         key={`${index}-input`}
                       >
-                        {`${input[0]}`}
+                        {`${inputType[0]}`}
                         <input
-                          type={`${input[1]}`}
-                          name={`${input[0]}-name`}
-                          id={`${input[0]}-id`}
+                          type={`${inputType[1]}`}
+                          name={`${inputType[0]}-name`}
+                          id={`${inputType[0]}-id`}
+                          maxLength={inputType[0] === 'Passcode' ? 6 : 30}
+                          value={
+                            inputType[0] === 'Full Name'
+                              ? fullname
+                              : inputType[0] === 'Email'
+                                ? email
+                                : inputType[0] === 'Passcode'
+                                  ? passcode
+                                  : inputType[0] === 'Mobile Number'
+                                    ? mobileNumber
+                                    : inputType[0] === 'Alternate Phone Number'
+                                      ? alternativeNumber
+                                      : ''
+                          }
+                          placeholder={
+                            inputType[0] === 'Full Name'
+                              ? 'John Doe'
+                              : inputType[0] === 'Email'
+                                ? 'johndoe@example.com'
+                                : inputType[0] === 'Passcode'
+                                  ? '123456'
+                                  : '+1 (555) 987-6543'
+                          }
+                          onChange={(e) =>
+                            handleValidationInput(e, `${inputType[0]}`)
+                          }
+                          required
                         />
                       </label>
                     );
@@ -166,6 +271,7 @@ export default function ConfirmBooking() {
                             type={`${inputType[1]}`}
                             name={`${inputType[0]}-name`}
                             id={`${inputType[0]}-id`}
+                            required
                           />
                         </label>
                       );
@@ -181,17 +287,19 @@ export default function ConfirmBooking() {
                           {inputType[1] === 'date' && (
                             <>
                               <input
+                                min={today}
                                 type={`${inputType[1]}`}
                                 name={`${inputType[0]}-name`}
                                 id={`${inputType[0]}-id`}
+                                required
                                 value={selectedDate}
                                 onChange={(e) =>
-                                  handlerUpdateDate(e, inputType[1])
+                                  handleValidationInput(e, inputType[1])
                                 }
                               />
                               {!validDate && (
                                 <p className={style.warning}>
-                                  The current date is a weekend or holiday.
+                                  The current date it is on weekend or holiday.
                                   Please change to be able to booking
                                 </p>
                               )}
@@ -202,15 +310,46 @@ export default function ConfirmBooking() {
                               <select
                                 name={`${inputType[0]}-name`}
                                 id={`${inputType[0]}-id`}
-                                disabled={!validDate}
+                                disabled={
+                                  !validDate ||
+                                  loadingSchedule ||
+                                  !allSchedule.filter(
+                                    (item) =>
+                                      !schedule[selectedDate]?.includes(item),
+                                  ).length
+                                }
+                                required
+                                onChange={(e) =>
+                                  handleValidationInput(e, inputType[1])
+                                }
                               >
-                                {!validDate ? (
+                                {!validDate ||
+                                loadingSchedule ||
+                                !allSchedule.filter(
+                                  (item) =>
+                                    !schedule[selectedDate]?.includes(item),
+                                ).length ? (
                                   <option value="disabled">
-                                    Not available
+                                    {loadingSchedule
+                                      ? 'Getting available schedules'
+                                      : 'Not available'}
                                   </option>
                                 ) : (
                                   <>
-                                    <option value="no-option">no option</option>
+                                    {allSchedule
+                                      .filter(
+                                        (item) =>
+                                          !schedule[selectedDate]?.includes(
+                                            item,
+                                          ),
+                                      )
+                                      .map((time, index) => {
+                                        return (
+                                          <option key={index} value={time}>
+                                            {time}
+                                          </option>
+                                        );
+                                      })}
                                   </>
                                 )}
                               </select>
@@ -225,6 +364,9 @@ export default function ConfirmBooking() {
                               name={`${inputType[0]}-name`}
                               id={`${inputType[0]}-id`}
                               placeholder="Hey! Type a note for me"
+                              onChange={(e) =>
+                                handleValidationInput(e, inputType[1])
+                              }
                             />
                           )}
                         </label>

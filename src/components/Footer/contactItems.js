@@ -1,8 +1,8 @@
-import whatsapp from '../../assets/images/icons/whatsapp.svg';
-import facebook from '../../assets/images/icons/facebook.svg';
-import instagram from '../../assets/images/icons/instagram.svg';
-import mail from '../../assets/images/icons/mail.svg';
-import location from '../../assets/images/icons/location.svg';
+import whatsapp from '../../assets/icons/whatsapp.svg';
+import facebook from '../../assets/icons/facebook.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import mail from '../../assets/icons/mail.svg';
+import location from '../../assets/icons/location.svg';
 
 const svgs = {
   whatsapp,

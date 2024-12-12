@@ -1,4 +1,4 @@
-import { icons } from '@/assets/images/icons/icons.js';
+import { icons } from '@/assets/icons/icons.js';
 import Image from 'next/image.js';
 import style from './WhatCanIRepair.module.css';
 
