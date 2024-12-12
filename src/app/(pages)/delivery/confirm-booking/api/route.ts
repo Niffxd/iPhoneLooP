@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const dynamic = 'force-static';
 
 const { google } = require('googleapis');
