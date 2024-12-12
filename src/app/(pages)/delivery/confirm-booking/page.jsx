@@ -174,7 +174,7 @@ export default function ConfirmBooking() {
 
   useEffect(() => {
     getDataFromApi();
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <div className={style.confirm_booking_container}>
